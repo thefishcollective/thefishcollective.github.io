@@ -23,13 +23,24 @@ header:
   {% endfor %}
 </div>
 
-## Working Group
+## Australian Working Group
 <div class="members-grid">
   {% for member in site.members %}
     <div class="member-card">
         <img src="{{ member.image }}" alt="{{ member.title }}">
         <h3>{{ member.title }}</h3>
       <p class="member-subtitle">{{ member.excerpt }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+## International Working Groups - In Development
+<div class="members-grid">
+  {% for internationalgroup in site.internationalgroup %}
+    <div class="member-card">
+        <img src="{{ internationalgroup.image }}" alt="{{ internationalgroup.title }}">
+        <h3>{{ internationalgroup.title }}</h3>
+      <p class="member-subtitle">{{ internationalgroup.excerpt }}</p>
     </div>
   {% endfor %}
 </div>
