@@ -225,6 +225,9 @@ collections:
   members:
     output: true
     permalink: /:collection/:path/
+  internationalgroup:
+    output: true
+    permalink: /:collection/:path/
   sops:
     output: true
     permalink: /:collection/:path/
