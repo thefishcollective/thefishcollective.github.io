@@ -34,7 +34,7 @@ header:
   {% endfor %}
 </div>
 
-## International Working Groups - In Development
+## International Working Groups (In Development)
 <div class="members-grid">
   {% for internationalgroup in site.internationalgroup %}
     <div class="member-card">
