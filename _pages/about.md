@@ -23,10 +23,10 @@ The National BRUVs Working Group held a workshop in New South Wales with three k
 Recognising that other video-based sampling tools collect similar fish and shark data both nationally and internationally (including stereo-DOVs and stereo-ROVs), the Working Group expanded its scope and established The Fish Collective.
 
 
-# Our Vision
+# Our Mission
 ---
 <img style="max-width: 50%; float: right;" src="/assets/images/about/dov.jpg">
-The Fish Collective advances the understanding and stewardship of marine ecosystems by coordinating a network of scientists who use underwater imagery to survey fish and shark assembalges, share data standards, and support collaboration, education, and training.
+The Fish Collective advances the understanding and stewardship of marine ecosystems by coordinating a network of scientists who use underwater imagery to survey fish and shark assemblages, share data standards, and support collaboration, education, and training.
 The Fish Collective actively governs and develops critical tools including GlobalArchive (an AI-ready data repository), CheckEM (an open-source toolkit for quality control of fish survey data), and advance methodologies that strengthen collaborative research and deepen our understanding and stewardship of marine ecosystems.
 
 # Governance
