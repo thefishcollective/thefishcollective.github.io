@@ -28,7 +28,6 @@ toc: true
 
 ---
 # New Members
----
 
 <div class="steps-container">
   <!-- Step 1 -->
@@ -114,8 +113,10 @@ toc: true
 </div>
 
 ---
+
+<br>
 # Existing members
----
+
 <div class="steps-container">
   <!-- Step 1 -->
 <div class="step">
