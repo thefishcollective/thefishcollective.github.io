@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Request access to the Australian National BRUVs synthesis data"
+title: "Request access or additional re-use of the Australian BRUVs synthesis data"
 excerpt: "<br><br><br>"
 header:
   overlay_color: "#5e616c"
