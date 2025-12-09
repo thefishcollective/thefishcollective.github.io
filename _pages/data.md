@@ -13,6 +13,7 @@ toc: true
 # More details on how to access data are coming soon! Watch this space.
 ---
 
+# New Members
 <div class="steps-container">
   <!-- Step 1 -->
   <div class="step">
@@ -95,3 +96,29 @@ toc: true
   </div>
 
 </div>
+
+# Existing members
+
+<div class="steps-container">
+  <!-- Step 1 -->
+<div class="step">
+    <h2>Step 1: Submit Data Request</h2>
+    <p>Submit a data request using the below form.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScsg-Mqx3cgLupidf1w_HLFmaYF50rTSbH9ODx3qznplYH-9Q/viewform?embedded=true" class="action-button">Submit a Request</a>
+  </div>
+
+    <!-- Step 2 -->
+  <div class="step">
+    <h2>Step 2: Review Committee Assessment</h2>
+    <p>Your application will be reviewed by our committee to ensure alignment with community goals and ethical standards.</p>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="step">
+    <h2>Step 3: Access Data via GlobalArchive</h2>
+    <p>Once approved, you’ll receive instructions to access The Fish Collective’s data via GlobalArchive.</p>
+    <a href="#" class="action-button disabled">GlobalArchive Instructions<br><small>(Coming Soon)</small></a>
+  </div>
+
+</div>
+
