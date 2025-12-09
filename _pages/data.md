@@ -13,7 +13,15 @@ toc: true
 # More details on how to access data are coming soon! Watch this space.
 ---
 
+<nav class="custom-toc">
+  <ul>
+    <li><a href="#new-members">New Members</a></li>
+    <li><a href="#existing-members">Existing Members</a></li>
+  </ul>
+</nav>
+---
 # New Members
+---
 <div class="steps-container">
   <!-- Step 1 -->
   <div class="step">
@@ -97,8 +105,9 @@ toc: true
 
 </div>
 
+---
 # Existing members
-
+---
 <div class="steps-container">
   <!-- Step 1 -->
 <div class="step">
