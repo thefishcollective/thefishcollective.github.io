@@ -13,6 +13,12 @@ toc: true
 # More details on how to access data are coming soon! Watch this space.
 ---
 
+<div style="background:#eef2f5; padding:15px 20px; border-left:4px solid #5e616c; margin-bottom:20px;">
+  <strong>There are two pathways to request access:</strong><br>
+  1. <strong>New Members</strong> — for people joining The Fish Collective for the first time.<br>
+  2. <strong>Existing Members</strong> — for those already part of the community.
+</div>
+
 <nav class="custom-toc">
   <ul>
     <li><a href="#new-members">New Members</a></li>
