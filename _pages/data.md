@@ -15,8 +15,8 @@ toc: true
 
 <div style="background:#eef2f5; padding:15px 20px; border-left:4px solid #5e616c; margin-bottom:20px;">
   <strong>There are two pathways to request access:</strong><br>
-  1. <strong><a href="#new-members">New Members</a></strong> — for people joining The Fish Collective for the first time.<br>
-  2. <strong><a href="#existing-members">Existing Members</a></strong> — for those already part of the community.
+  1. <strong><a href="#1-new-members">New Members</a></strong> — for people joining The Fish Collective for the first time.<br>
+  2. <strong><a href="#2-existing-members">Existing Members</a></strong> — for those already part of the community.
 </div>
 
 ---
