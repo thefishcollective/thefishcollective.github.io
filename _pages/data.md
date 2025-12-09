@@ -19,9 +19,11 @@ toc: true
     <li><a href="#existing-members">Existing Members</a></li>
   </ul>
 </nav>
+
 ---
 # New Members
 ---
+
 <div class="steps-container">
   <!-- Step 1 -->
   <div class="step">
