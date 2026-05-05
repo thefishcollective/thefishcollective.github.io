@@ -34,7 +34,7 @@ toc: true
   <div class="step">
     <h2>Step 2: Read the Data Sharing Agreement</h2>
     <p>Understand the terms for accessing and contributing data. This document outlines responsibilities, usage rights, and protections.</p>
-    <a href="#" class="action-button disabled">Data Sharing Agreement<br><small>(Coming Soon)</small></a>
+    <a href="/assets/Data%20%Sharing%20%Agreement%20%(Amended%20%and%20%Restated).pdf" class="action-button">Data Sharing Agreement<br></a>
   </div>
   
   <!-- Step 3 -->
