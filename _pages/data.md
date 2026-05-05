@@ -10,7 +10,6 @@ permalink: /data/
 toc: true
 ---
 
-# More details on how to access data are coming soon! Watch this space.
 ---
 
 <div style="background:#eef2f5; padding:15px 20px; border-left:4px solid #5e616c; margin-bottom:20px;">
@@ -34,7 +33,7 @@ toc: true
   <div class="step">
     <h2>Step 2: Read the Data Sharing Agreement</h2>
     <p>Understand the terms for accessing and contributing data. This document outlines responsibilities, usage rights, and protections.</p>
-    <a href="/assets/Data%20%Sharing%20%Agreement%20%(Amended%20%and%20%Restated).pdf" class="action-button">Data Sharing Agreement<br></a>
+    <a href="/assets/Data_Sharing_Agreement_(Amended_and_Restated).pdf" class="action-button">Data Sharing Agreement<br></a>
   </div>
   
   <!-- Step 3 -->
