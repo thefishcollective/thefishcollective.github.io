@@ -31,7 +31,7 @@ toc: true
 
   <!-- Step 2 -->
   <div class="step">
-    <h2>Step 2: Read the Data Sharing Agreement</h2>
+    <h2>Step 2: Read the Data Sharing Agreement and Deed Poll</h2>
     <p>Understand the terms for accessing and contributing data. This document outlines responsibilities, usage rights, and protections.</p>
     <a href="/assets/Data_Sharing_Agreement_(Amended_and_Restated).pdf" class="action-button">Data Sharing Agreement<br></a>
   </div>
