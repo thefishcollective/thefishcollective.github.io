@@ -11,8 +11,8 @@ header:
   video:
     src: /assets/videos/GB-BV-P06_G.hebraicum_77cm_16.0m_small.mp4
 ---
-
-## Steering Committee
+## Australian Working Group
+### Steering Committee
 <div class="members-grid">
   {% for steering in site.steering %}
     <div class="member-card">
@@ -23,7 +23,7 @@ header:
   {% endfor %}
 </div>
 
-## Australian Working Group
+### Working Group
 <div class="members-grid">
   {% for member in site.members %}
     <div class="member-card">
