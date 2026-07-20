@@ -1,6 +1,5 @@
 ---
 title: Working Groups
-excerpt: "<br><br><br>"
 layout: splash
 permalink: /members/
 collection: members
