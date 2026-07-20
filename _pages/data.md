@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Request access or additional re-use of the Australian BRUVs synthesis data"
+title: "Access data"
 excerpt: "<br><br><br>"
 header:
   overlay_color: "#5e616c"
@@ -10,7 +10,35 @@ permalink: /data/
 toc: true
 ---
 
----
+**<div class="features-row">
+  {% for feature in site.datasets %}
+    <div class="feature-card">
+      <a href="{{ feature.external_url | default: feature.url }}" target="_blank" rel="noopener" class="feature-link">
+        <div class="feature-image">
+          <img src="{{ feature.image }}" alt="{{ feature.title }}">
+        </div>
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        {% if feature.excerpt %}
+          <p class="feature-excerpt">{{ feature.excerpt }}</p>
+        {% endif %}
+        {% if feature.button %}
+          <span class="feature-button">{{ feature.button }}</span>
+        {% endif %}
+      </a>
+    </div>
+  {% endfor %}
+</div>**
+
+
+
+
+
+
+
+
+# OLD
+
+
 
 <div style="background:#eef2f5; padding:15px 20px; border-left:4px solid #5e616c; margin-bottom:20px;">
   <strong>There are two pathways to request access:</strong><br>
