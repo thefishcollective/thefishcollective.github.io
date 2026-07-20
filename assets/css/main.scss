@@ -422,3 +422,15 @@ search: false
 .step.full-width {
     flex: 1 1 100%;
 }
+
+.page__subtitle {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.page__lead {
+  max-width: 850px;
+}
