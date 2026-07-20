@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Join The Fish Collective"
+title: "Join The Fish Collective and a Working Group"
 excerpt: "<br><br><br>"
 header:
   overlay_color: "#5e616c"
