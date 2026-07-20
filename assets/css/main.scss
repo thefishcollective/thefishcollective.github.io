@@ -434,3 +434,27 @@ search: false
 .page__lead {
   max-width: 850px;
 }
+
+.page__hero--overlay {
+  height: 400px;
+  overflow: hidden;
+}
+
+.page__hero--overlay .wrapper {
+  position: relative;
+  z-index: 2;
+  padding-top: 55px;
+
+  // Allow the text block to use more of the hero width
+  max-width: 1320px;
+}
+
+.page__hero--overlay .page__lead {
+  // Override the narrower width used by the theme
+  max-width: 900px;
+  width: 75%;
+
+  // Slightly tighter spacing saves vertical room
+  line-height: 1.4;
+  margin-top: 1.25rem;
+}
