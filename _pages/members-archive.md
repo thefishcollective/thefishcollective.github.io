@@ -1,5 +1,5 @@
 ---
-title: Members of The Fish Collective
+title: Working Groups
 excerpt: "<br><br><br>"
 layout: splash
 permalink: /members/
