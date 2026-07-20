@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Access data"
+title: "Access stereo-video data"
 header:
   overlay_color: "#5e616c"
   video:
