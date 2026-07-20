@@ -255,6 +255,9 @@ collections:
   frontpage:
     output: true
     permalink: /:collection/:path/
+  datasets:
+    output: true
+    permalink: /:collection/:path/
 
 # Sass/SCSS
 sass:
