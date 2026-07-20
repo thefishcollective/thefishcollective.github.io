@@ -4,7 +4,7 @@ main:
     url: /join/
   - title: "Request Data"
     url: /data/
-  - title: "Current Members"
+  - title: "Working Groups"
     url: /members/
   - title: "Events"
     url: /meetings/
