@@ -1,7 +1,6 @@
 ---
 layout: splash
 title: "Access data"
-excerpt: "<br><br><br>"
 header:
   overlay_color: "#5e616c"
   video:
