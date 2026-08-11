@@ -34,7 +34,7 @@ toc: true
        target="_blank" 
        rel="noopener noreferrer" 
        class="whatsapp-button">
-       Join WhatsApp Community
+       Join Discord Community
     </a>
   </div>
 
