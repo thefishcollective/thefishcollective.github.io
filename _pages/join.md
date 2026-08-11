@@ -28,9 +28,9 @@ toc: true
 
   <!-- Step 2 -->
   <div class="step">
-    <h2>Step 2 (Optional): Join our WhatsApp Community</h2>
-    <p>Once you've joined, you can also connect with our community on WhatsApp.</p>
-    <a href="https://chat.whatsapp.com/Ln7EtBcFg7L41LxYwtYM1Q" 
+    <h2>Step 2 (Optional): Join our Discord Community</h2>
+    <p>Once you've joined, you can also connect with our community on Discord</p>
+    <a href="https://discord.com/invite/RvGtydcn6F" 
        target="_blank" 
        rel="noopener noreferrer" 
        class="whatsapp-button">
