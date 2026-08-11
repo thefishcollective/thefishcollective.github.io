@@ -1,5 +1,5 @@
 ---
-title: Working Groups
+title: Stereo-video Working Groups
 layout: splash
 permalink: /members/
 collection: members
