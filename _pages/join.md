@@ -30,11 +30,11 @@ toc: true
   <div class="step">
     <h2>Step 2 (Optional): Join our Discord Community</h2>
     <p>Once you've joined, you can also connect with our community on Discord</p>
-    <a href="https://discord.com/invite/RvGtydcn6F" 
+    <a href="https://discord.gg/TpeT4CsVCR" 
        target="_blank" 
        rel="noopener noreferrer" 
        class="whatsapp-button">
-       Join Discord Community
+       Join the The Fish Collective - a global network of stereo-video working groups Discord Server!
     </a>
   </div>
 
