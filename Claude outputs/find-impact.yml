@@ -1,0 +1,48 @@
+# Searches OpenAlex every day for papers and reports mentioning GlobalArchive,
+# The Fish Collective or CheckEM, and opens (or updates) one pull request
+# adding any new finds to _data/publications.yml for the Impact page.
+#
+# One-off setup in the GitHub repo:
+#   Settings > Actions > General > Workflow permissions >
+#   tick "Allow GitHub Actions to create and approve pull requests"
+# Optional: add a free OpenAlex API key as the repository secret OPENALEX_API_KEY.
+
+name: Find Impact mentions
+
+on:
+  schedule:
+    - cron: "17 22 * * *"   # daily, 6:17 am Perth time
+  workflow_dispatch:         # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Search OpenAlex
+        run: python _impact/find_mentions.py
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+
+      - name: Open or update pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: impact/new-mentions
+          delete-branch: true
+          commit-message: "Impact: add new mentions found in OpenAlex"
+          title: "Impact page: new mentions to review"
+          body-path: _impact/last-run.md
+          add-paths: |
+            _data/publications.yml
+            _impact/seen.txt

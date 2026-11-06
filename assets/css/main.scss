@@ -534,3 +534,42 @@ search: false
     gap: 0.25rem;
   }
 }
+
+/* Impact page: sections and tags */
+.pub-section {
+  text-align: left;
+  margin-top: 2.5rem;
+  color: #222;
+}
+
+.pub-count {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.55rem;
+  border-radius: 999px;
+  background: #e6f0f2;
+  color: #005f73;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+.pub-card.pub-website { border-left-color: #0a9396; }
+.pub-card.pub-policy  { border-left-color: #ca6702; }
+
+.pub-tags { margin-left: 0.5rem; }
+
+.pub-tag {
+  display: inline-block;
+  margin: 0 0.25rem 0 0;
+  padding: 0 0.45rem;
+  border-radius: 4px;
+  background: #f1f1f1;
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.pub-empty {
+  text-align: left;
+  color: #888;
+  font-style: italic;
+}

@@ -11,7 +11,7 @@ header:
     src: /assets/videos/EG-CPO-014_N.ferrugineus_and_busy_reef_7m_small.mp4
 ---
 
-<p class="pub-intro">Research papers that have come from The Fish Collective, synthesised data, tools and standards it shares.</p>
+<p class="pub-intro">Research papers that have come from the Fish Collective and the data, tools and standards it shares.</p>
 
 <div class="pub-list">
   {% assign pubs = site.data.publications | sort: "year" | reverse %}
