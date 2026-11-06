@@ -43,3 +43,607 @@
   year: 2019
   journal: "Methods in Ecology and Evolution"
   doi: "10.1111/2041-210X.13189"
+
+# --- Added automatically 2026-11-06 (check before merging) ---
+
+- type: paper
+  title: "Larger and more abundant legal-sized targeted fish inside ‘no take’ areas of a subtropical marine park over a 12-year period"
+  authors: "Malcolm et al."
+  year: 2026
+  journal: "Marine and Freshwater Research"
+  doi: "10.1071/mf26096"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fine-scale fish associations across mesophotic and deep coral fore-reef habitats"
+  authors: "Hellmrich et al."
+  year: 2026
+  journal: "Coral Reefs"
+  doi: "10.1007/s00338-026-02852-9"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "How do you study microplastics when they’re everywhere?"
+  authors: "special to C&EN Fintan Burke"
+  year: 2026
+  journal: "C&EN Global Enterprise"
+  doi: "10.1021/cen-10405-cover"
+  mentions: ["GlobalArchive", "CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Integrated ocean management: national science and governance priorities for Australia's marine estate"
+  authors: "Fulton et al."
+  year: 2026
+  journal: "Australian Journal of Maritime & Ocean Affairs"
+  doi: "10.1080/18366503.2026.2687142"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Data through to information – Australia’s digital marine commons"
+  authors: "Moltmann et al."
+  year: 2026
+  journal: "Australian Journal of Maritime & Ocean Affairs"
+  doi: "10.1080/18366503.2026.2667102"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Multiple lines of evidence framework for quantifying ecosystem function and connectivity of offshore infrastructure: a rigs-to-reefs perspective"
+  authors: "Reis‐Santos et al."
+  year: 2026
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2026.1865430"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fish community dynamics in remote northern Australia: the role of habitat and seascape"
+  authors: "Forsman et al."
+  year: 2026
+  journal: "Estuarine Coastal and Shelf Science"
+  doi: "10.1016/j.ecss.2026.110330"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Machine learning, eDNA and citizen science in monitoring and assessing biodiversity and invasive alien species at sea"
+  authors: "Borja et al."
+  year: 2026
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2026.1891674"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "A minimization principle behind the diffusion bridge of diurnal fish migration"
+  authors: "Hidekazu Yoshioka"
+  year: 2026
+  journal: "Mathematical Biosciences"
+  doi: "10.1016/j.mbs.2026.109684"
+  mentions: ["The Fish Collective"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Comparing convolutional neural network and random forest for benthic habitat mapping in Apollo Marine Park"
+  authors: "Simmons et al."
+  year: 2025
+  journal: "Remote Sensing in Ecology and Conservation"
+  doi: "10.1002/rse2.70038"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Investigating Fish‐Habitat Associations on Mesophotic Reefs Using Stereo‐ BRUVS"
+  authors: "Gerrans et al."
+  year: 2025
+  journal: "Austral Ecology"
+  doi: "10.1111/aec.70096"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Psychological Contract Elements and Nurses’ Psychological Wellbeing in Private Hospitals, Klang Valley, Malaysia"
+  authors: "Soomro et al."
+  year: 2025
+  journal: "The Malaysian Journal of Nursing"
+  doi: "10.31674/mjn.2025.v17i02.006"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Deciphering the footprints of predator–prey interactions on coral reefs: seasonal dynamics and environmental drivers of reef halos"
+  authors: "Lester et al."
+  year: 2025
+  journal: "Coral Reefs"
+  doi: "10.1007/s00338-025-02701-1"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Chum dine with me: assessing the effects of wildlife tourism on non-target fish assemblages"
+  authors: "Whitmarsh et al."
+  year: 2025
+  journal: "Wildlife Research"
+  doi: "10.1071/wr24211"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Differential changes in the taxonomic and functional composition of herbivorous fishes from shallow to mesophotic coral ecosystems at the Coral Sea Marine Park, Australia"
+  authors: "Quimpo et al."
+  year: 2025
+  journal: "Coral Reefs"
+  doi: "10.1007/s00338-025-02764-0"
+  mentions: ["The Fish Collective"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Assessing the Effectiveness of 3D-Printed Ceramic Structures for Coral Restoration: Growth, Survivorship, and Biodiversity Using Visual Surveys and eDNA"
+  authors: "Yu et al."
+  year: 2025
+  journal: "Journal of Marine Science and Engineering"
+  doi: "10.3390/jmse13091605"
+  mentions: ["The Fish Collective"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Novel Drop‐Sampler for Simultaneous Collection of Stereo‐Video, Environmental DNA and Oceanographic Data"
+  authors: "Thompson et al."
+  year: 2024
+  journal: "Ecology and Evolution"
+  doi: "10.1002/ece3.70705"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Divergent responses of pelagic and benthic fish body-size structure to remoteness and protection from humans"
+  authors: "Letessier et al."
+  year: 2024
+  journal: "Science"
+  doi: "10.1126/science.adi7562"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Advancing Data Standardisation: OBIS Australia’s Contribution to Marine Biodiversity Data Publishing in Australia"
+  authors: "Rajbhandari et al."
+  year: 2024
+  journal: "Biodiversity Information Science and Standards"
+  doi: "10.3897/biss.8.141114"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Maximising the value of visual data in South African National Parks"
+  authors: "Seymour et al."
+  year: 2024
+  journal: "Koedoe"
+  doi: "10.4102/koedoe.v66i1.1811"
+  mentions: ["GlobalArchive", "CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Jurisdiction of Hybrid Courts in the Light of International Criminal Law. The Case of Cambodia and Sierra Leone (Part I)"
+  authors: "Ioan-Ciprian Dospinoiu"
+  year: 2024
+  journal: "Studii Juridice Universitare"
+  doi: "10.54481/sju.2023.1.10"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Directed conservation of the world’s reef sharks and rays"
+  authors: "Goetze et al."
+  year: 2024
+  journal: "Nature Ecology & Evolution"
+  doi: "10.1038/s41559-024-02386-9"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Dispersed plug flow photocatalytic reactor using TiO2 ‐coated foams, 2D modeling, and experimental operating mode"
+  authors: "Ribeiro et al."
+  year: 2024
+  journal: "AIChE Journal"
+  doi: "10.1002/aic.18610"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fact-checking jako přesvědčovací dialog"
+  authors: "Eliška Míšková"
+  year: 2024
+  journal: "Studia philosophica"
+  doi: "10.5817/sph2024-2-3"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fine-scale variability in catch and growth rates of western rock lobsters (Panulirus cygnus) show heterogeneous life-history parameters"
+  authors: "Miller et al."
+  year: 2023
+  journal: "Marine and Freshwater Research"
+  doi: "10.1071/mf22084"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Interspecies transmission of SARS CoV-2 with special emphasis on viral mutations and ACE-2 receptor homology roles"
+  authors: "Hamdy et al."
+  year: 2023
+  journal: "International Journal of Veterinary Science and Medicine"
+  doi: "10.1080/23144599.2023.2222981"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Seascape connectivity of temperate fishes between estuarine nursery areas and open coastal reefs"
+  authors: "Swadling et al."
+  year: 2022
+  journal: "Journal of Applied Ecology"
+  doi: "10.1111/1365-2664.14157"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "The WIO Regional Benthic Imagery Workshop: Lessons from past IIOE-2 expeditions"
+  authors: "Haupt et al."
+  year: 2022
+  journal: "Research Ideas and Outcomes"
+  doi: "10.3897/rio.8.e81563"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Habitat and Marine Reserve Status Drive Reef Fish Biomass and Functional Diversity in the Largest South Atlantic Coral Reef System (Abrolhos, Brazil)"
+  authors: "Rolim et al."
+  year: 2022
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2022.701244"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Drivers of variation in occurrence, abundance, and behaviour of sharks on coral reefs"
+  authors: "Lester et al."
+  year: 2022
+  journal: "Scientific Reports"
+  doi: "10.1038/s41598-021-04024-x"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Accelerating Species Recognition and Labelling of Fish From Underwater Video With Machine-Assisted Deep Learning"
+  authors: "Marrable et al."
+  year: 2022
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2022.944582"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Globalization and communication science"
+  authors: "Elizabeth Ferreira"
+  year: 2022
+  journal: "Communicare Journal for Communication Studies in Africa"
+  doi: "10.36615/jcsa.v23i2.1769"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Acompanhamento Farmacoterapêutico de Pacientes em uso de Antidepressivos em uma Unidade Básica de Saúde no Noroeste do Paraná"
+  authors: "Guilhen et al."
+  year: 2022
+  journal: "Ensaios e Ciência C Biológicas Agrárias e da Saúde"
+  doi: "10.17921/1415-6938.2021v25n5-esp.p768-775"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Emergency Medical Services Stroke Care Performance Variability in Michigan: Analysis of a Statewide Linked Stroke Registry"
+  authors: "Oostema et al."
+  year: 2022
+  journal: "Journal of the American Heart Association"
+  doi: "10.1161/jaha.122.026834"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fish Assemblages Associated With Oil and Gas Platforms in the Gulf of Thailand"
+  authors: "Harvey et al."
+  year: 2021
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2021.664014"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fish associations with shallow water subsea pipelines compared to surrounding reef and soft sediment habitats"
+  authors: "Schramm et al."
+  year: 2021
+  journal: "Scientific Reports"
+  doi: "10.1038/s41598-021-85396-y"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Establishing the Foundation for the Global Observing System for Marine Life"
+  authors: "Satterthwaite et al."
+  year: 2021
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2021.737416"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Research Trends and Future Perspectives in Marine Biomimicking Robotics"
+  authors: "Aguzzi et al."
+  year: 2021
+  journal: "Sensors"
+  doi: "10.3390/s21113778"
+  mentions: ["The Fish Collective"]
+  added: 2026-11-06
+
+- type: paper
+  title: "ENTRAVES E DIFICULDADES DOS ALUNOS NO PROCESSO DE APRENDIZAGEM EM CURSOS PRÁTICOS DE PILOTO PRIVADO DE AVIÃO"
+  authors: "Machado et al."
+  year: 2021
+  journal: "Revista Brasileira de Aviação Civil & Ciências Aeronáuticas"
+  url: "https://rbac.cia.emnuvens.com.br/revista/article/view/49"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "No detrimental effects of desalination waste on temperate fish assemblages"
+  authors: "Whitmarsh et al."
+  year: 2020
+  journal: "ICES Journal of Marine Science"
+  doi: "10.1093/icesjms/fsaa174"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: policy
+  title: "Making a difference through data-driven research"
+  authors: "ARDC"
+  year: 2020
+  source: "Zenodo (CERN European Organization for Nuclear Research)"
+  doi: "10.5281/zenodo.6529948"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Environmental and Anthropogenic Factors Affect Fish Abundance: Relationships Revealed by Automated Cameras Deployed by Fishers"
+  authors: "Brooker et al."
+  year: 2020
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2020.00279"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Illegal recreational fishing causes a decline in a fishery targeted species (Snapper: Chrysophrys auratus) within a remote no-take marine protected area"
+  authors: "Harasti et al."
+  year: 2019
+  journal: "PLoS ONE"
+  doi: "10.1371/journal.pone.0209926"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Protection from illegal fishing and shark recovery restructures mesopredatory fish communities on a coral reef"
+  authors: "Speed et al."
+  year: 2019
+  journal: "Ecology and Evolution"
+  doi: "10.1002/ece3.5575"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Network of small no-take marine reserves reveals greater abundance and body size of fisheries target species"
+  authors: "Rolim et al."
+  year: 2019
+  journal: "PLoS ONE"
+  doi: "10.1371/journal.pone.0204970"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Taking a deeper look: Quantifying the differences in fish assemblages between shallow and mesophotic temperate rocky reefs"
+  authors: "Williams et al."
+  year: 2019
+  journal: "PLoS ONE"
+  doi: "10.1371/journal.pone.0206778"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "ICES-FAO Working Group on Fishing Technology and Fish Behaviour (WGFTFB)"
+  authors: "ICES"
+  year: 2019
+  journal: "Institutional Archive of Ifremer (French Research Institute for Exploitation of the Sea)"
+  doi: "10.17895/ices.pub.5592"
+  mentions: ["The Fish Collective"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Cloud-based national on-line services to annotate and analyse underwater imagery"
+  authors: "Proctor et al."
+  year: 2018
+  journal: "eCite Digital Repository (University of Tasmania)"
+  url: "http://ecite.utas.edu.au/129264"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Multiobjective Cloud Workflow Scheduling: A Multiple Populations Ant Colony System Approach"
+  authors: "Chen et al."
+  year: 2018
+  journal: "IEEE Transactions on Cybernetics"
+  doi: "10.1109/tcyb.2018.2832640"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Applications of ICTs and Action Recognition for Construction Workers"
+  authors: "Ren‐Jye Dzeng"
+  year: 2018
+  journal: "Trends in Civil Engineering and its Architecture"
+  doi: "10.32474/tceia.2018.01.000113"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Tasmania's coastal reefs: deep reef habitats and significance for finfish production and biodiversity"
+  authors: "Lyle et al."
+  year: 2017
+  journal: "eCite Digital Repository (University of Tasmania)"
+  url: "http://ecite.utas.edu.au/117149"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Fish wariness is a more sensitive indicator to changes in fishing pressure than abundance, length or biomass"
+  authors: "Goetze et al."
+  year: 2017
+  journal: "Ecological Applications"
+  doi: "10.1002/eap.1511"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Introducing Students to the FASB Codification System"
+  authors: "Brenner et al."
+  year: 2012
+  journal: "The Accounting educators' journal"
+  url: "https://www.aejournal.com/ojs/index.php/aej/article/view/210"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "LanHEP—a package for the automatic generation of Feynman rules in field theory. Version 3.0"
+  authors: "A. Semenov"
+  year: 2008
+  journal: "Computer Physics Communications"
+  doi: "10.1016/j.cpc.2008.10.012"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: policy
+  title: "Assessing a financial value for a corporate entity's reputation; a proposed formula"
+  authors: "Bowd et al."
+  year: 2006
+  source: "e-space (Manchester Metropolitan University)"
+  url: "https://e-space.mmu.ac.uk/1458/1/boyd%20wp02_01.pdf"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: policy
+  title: "Historical assessment of the Port of Singapore Authority and its progression towards a ‘High-Tech Port’"
+  authors: "Jayarethanam Pillai"
+  year: 2005
+  source: "ANU Open Research (Australian National University)"
+  url: "http://hdl.handle.net/1885/43054"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "La situación de las mujeres en las bibliotecas a nivel internacional"
+  authors: "Gannon‐Leary et al."
+  year: 2003
+  journal: "E-LIS Repository (University of Naples Federico II)"
+  url: "http://eprints.rclis.org/5928/1/70a1.PDF"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Hemispheric Integration and the Politics of Regionalism: The Free Trade Area of the Americas (FTAA)"
+  authors: "Christopher M. Bruner"
+  year: 2002
+  journal: "University of Miami School of Law Institutional Repository (University of Miami)"
+  url: "https://repository.law.miami.edu/umialr/vol33/iss1/2"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Tobacco control policy: the European dimension"
+  authors: "Gilmore et al."
+  year: 2002
+  journal: "Clinical Medicine"
+  doi: "10.7861/clinmedicine.2-4-335"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "German Corporate Culture in the Twenty-First Century: The Interrelation between the End of Germany, Inc. and Germany's Corporate Capital Gains Tax Reform"
+  authors: "Benjamin W. Johnson"
+  year: 2002
+  journal: "Minnesota journal of international law"
+  doi: "10.24926/19441992.490"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Change Within the Mobile Communications Market An initial assessment of the structural and organisational repercussions of 3G"
+  authors: "Jason Whalley"
+  year: 2002
+  journal: "Strathprints: The University of Strathclyde institutional repository (University of Strathclyde)"
+  url: "https://strathprints.strath.ac.uk/view/author/81143.html>"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "The Accidental Purist: Reclaiming the Gertz All Purpose Public Figure Doctrine in the Age of Celebrity Journalism"
+  authors: "James C. Mitchell"
+  year: 2002
+  journal: "bepress Legal Repository"
+  url: "https://digitalcommons.lmu.edu/elr/vol22/iss3/1"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Second hand smoke and risk assessment: what was in it for the tobacco industry?"
+  authors: "Hirschhorn et al."
+  year: 2001
+  journal: "Tobacco Control"
+  doi: "10.1136/tc.10.4.375"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "An Introduction into the Regional Economic Integration Process of the Americas"
+  authors: "Nikolaos Lavranos"
+  year: 2001
+  journal: "Zeitschrift für europarechtliche Studien"
+  doi: "10.5771/1435-439x-2001-1-127"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Privatizing Social Security"
+  authors: "Jerry W. Markham"
+  year: 2001
+  journal: "Digital USD (University of San Diego)"
+  url: "https://digital.sandiego.edu/sdlr/vol38/iss3/3"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Effect of Hypoadrenalism and Excessive Doses of Desoxycorticosterone Acetate upon Response of the Rat to Ouabain"
+  authors: "Unterman et al."
+  year: 1955
+  journal: "Circulation Research"
+  doi: "10.1161/01.res.3.3.280"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
+
+- type: paper
+  title: "Kapitola etyricátá osmá: Nízinou pri zálivu Karpentarském"
+  authors: "J. V. Daneš"
+  year: 1911
+  doi: "10.5962/p.410833"
+  mentions: ["CheckEM"]
+  added: 2026-11-06
