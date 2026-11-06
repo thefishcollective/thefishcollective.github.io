@@ -467,3 +467,70 @@ search: false
   margin: 0;
   line-height: 1.35;
 }
+
+
+/* Impact page: publications list */
+.pub-intro {
+  text-align: left;
+  color: #333;
+  margin: 1rem 0 0;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem 0;
+}
+
+.pub-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-left: 4px solid #005f73;
+}
+
+.pub-year {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #005f73;
+  min-width: 3rem;
+}
+
+.pub-text {
+  flex: 1;
+  text-align: left;
+}
+
+.pub-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: #005f73;
+  text-align: left;
+}
+
+.pub-meta {
+  margin: 0.4rem 0 0.2rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.pub-doi {
+  font-size: 0.85rem;
+  color: #0077cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .pub-card {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

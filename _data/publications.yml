@@ -1,0 +1,33 @@
+# Research papers that have come from the Fish Collective.
+# Shown on the Impact page (/impact/), newest first.
+# To add a paper, copy a block and fill in the fields.
+
+- title: "CheckEM: An open-source toolkit for standardising, cleaning and visualising stereo-video fish survey data"
+  authors: "Gibbons et al."
+  year: 2026
+  journal: "Methods in Ecology and Evolution"
+  doi: "10.1111/2041-210X.70287"
+
+- title: "Effects of human footprint and biophysical factors on the body-size structure of fished marine species"
+  authors: "Bosch et al."
+  year: 2022
+  journal: "Conservation Biology"
+  doi: "10.1111/cobi.13807"
+
+- title: "Increased connectivity and depth improve the effectiveness of marine reserves"
+  authors: "Goetze et al."
+  year: 2021
+  journal: "Global Change Biology"
+  doi: "10.1111/gcb.15635"
+
+- title: "The BRUVs workshop – An Australia-wide synthesis of baited remote underwater video data to answer broad-scale ecological questions about fish, sharks and rays"
+  authors: "Harvey et al."
+  year: 2021
+  journal: "Marine Policy"
+  doi: "10.1016/j.marpol.2021.104430"
+
+- title: "A field and video annotation guide for baited remote underwater stereo-video surveys of demersal fish assemblages"
+  authors: "Langlois et al."
+  year: 2020
+  journal: "Methods in Ecology and Evolution"
+  doi: "10.1111/2041-210X.13470"

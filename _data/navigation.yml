@@ -10,6 +10,8 @@ main:
     url: /meetings/
   - title: "Guides"
     url: /sops/
+  - title: "Impact"
+    url: /impact/
   - title: "Media"
     url: /media/
   - title: "About"
