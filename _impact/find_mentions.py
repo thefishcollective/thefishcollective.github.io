@@ -5,7 +5,7 @@ or CheckEM, and add them to _data/publications.yml for review.
 Searches OpenAlex (titles, abstracts and full text). Run daily by
 .github/workflows/find-impact.yml, which opens a pull request with any new finds.
 
-Run locally from the repo root:  python .github/scripts/find_mentions.py
+Run locally from the repo root:  python _impact/find_mentions.py
   --dry-run   print what would be added without changing any files
 
 Optional environment variables:
@@ -25,8 +25,8 @@ import urllib.request
 import yaml
 
 DATA_FILE = "_data/publications.yml"
-SEEN_FILE = ".github/impact/seen.txt"          # every DOI/ID ever proposed, so rejected ones don't come back
-SUMMARY_FILE = ".github/impact/last-run.md"    # used as the pull request description
+SEEN_FILE = "_impact/seen.txt"          # every DOI/ID ever proposed, so rejected ones don't come back
+SUMMARY_FILE = os.environ.get("IMPACT_SUMMARY", "_impact/last-run.md")  # pull request description (kept outside the repo in Actions)
 
 # label shown on the website  ->  OpenAlex search query
 SEARCHES = {
@@ -186,7 +186,7 @@ def main():
         print(f"  + [{i['type']}] {i.get('year')} {i['title'][:90]}  ({', '.join(i['mentions'])})")
     if dry:
         return
-    os.makedirs(os.path.dirname(SUMMARY_FILE), exist_ok=True)
+    os.makedirs(os.path.dirname(SUMMARY_FILE) or ".", exist_ok=True)
     if not new:
         open(SUMMARY_FILE, "w", encoding="utf-8").write("No new mentions found.\n")
         return
