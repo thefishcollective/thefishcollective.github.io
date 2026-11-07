@@ -647,3 +647,14 @@
   doi: "10.5962/p.410833"
   mentions: ["CheckEM"]
   added: 2026-11-06
+
+# --- Added automatically 2026-11-07 (check before merging) ---
+
+- type: paper
+  title: "Depth and benthic habitat influence shallow and mesophotic predatory fishes on a remote, high-latitude coral reef"
+  authors: "Brown et al."
+  year: 2022
+  journal: "PLoS ONE"
+  doi: "10.1371/journal.pone.0265067"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-07
