@@ -350,11 +350,14 @@ def main():
                 continue
             if key in known or key in seen or url.strip().lower() in known:
                 continue
+            year = overton_year(d)
+            if year and year < int(FROM_DATE[:4]):
+                continue
             src = d.get("source") or {}
             found[key] = {
                 "type": "policy",
                 "title": re.sub(r"\s+", " ", d["title"]).strip(),
-                "year": overton_year(d),
+                "year": year,
                 "source": src.get("title"),
                 "url": url,
                 "overton_id": pid,
