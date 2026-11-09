@@ -1,6 +1,7 @@
 """
 Find new papers and policy documents that mention GlobalArchive, The Fish
-Collective or CheckEM, and add them to _data/publications.yml for review.
+Collective or CheckEM (plus policy documents that cite a core paper), and add
+them to _data/publications.yml for review.
 
 Searches OpenAlex (papers: titles, abstracts and full text) and, when an
 OVERTON_API_KEY is set, Overton (policy and government documents). Run daily by
@@ -38,6 +39,9 @@ SEARCHES = {
     "The Fish Collective": ["The Fish Collective"],
     "CheckEM": ["CheckEM"],
 }
+
+# tag for Overton documents that cite one of the `core: true` papers
+CITES_LABEL = "Cites a core paper"
 
 # OpenAlex work types and where they go on the Impact page (anything else is skipped)
 TYPE_MAP = {
@@ -91,15 +95,15 @@ def search(phrase):
     return results
 
 
-def overton_search(phrase):
-    """Policy documents in Overton whose full text contains the exact phrase."""
+def overton_search(params):
+    """Policy documents in Overton matching params (a text query or cited DOIs)."""
     key = os.environ.get("OVERTON_API_KEY")
     if not key:
         return None
     results = []
     for page in range(1, OVERTON_MAX_PAGES + 1):
         url = OVERTON_API + "?" + urllib.parse.urlencode(
-            {"query": f'"{phrase}"', "format": "json", "api_key": key, "page": page})
+            {**params, "format": "json", "api_key": key, "page": page})
         req = urllib.request.Request(url, headers={"User-Agent": "fishcollective-impact-finder"})
         for attempt in range(4):
             try:
@@ -231,40 +235,41 @@ def main():
             item["url"] = landing_url(w)
         found[key] = item
 
-    for label, phrases in SEARCHES.items():
-        for phrase in phrases:
-            docs = overton_search(phrase)
-            if docs is None:
-                print("Overton: skipped (no OVERTON_API_KEY set)")
-                break
-            print(f'"{phrase}": {len(docs)} results from Overton')
-            for d in docs:
-                pid = str(d.get("policy_document_id") or "")
-                if not pid or not d.get("title"):
-                    continue
-                key = "overton:" + pid.lower()
-                url = d.get("document_url") or d.get("pdf_url") or \
-                    f"https://app.overton.io/document.php?policy_document_id={pid}"
-                if key in found:
-                    if label not in found[key]["mentions"]:
-                        found[key]["mentions"].append(label)
-                    continue
-                if key in known or key in seen or url.strip().lower() in known:
-                    continue
-                src = d.get("source") or {}
-                found[key] = {
-                    "type": "policy",
-                    "title": re.sub(r"\s+", " ", d["title"]).strip(),
-                    "year": overton_year(d),
-                    "source": src.get("title"),
-                    "url": url,
-                    "overton_id": pid,
-                    "mentions": [label],
-                    "added": dt.date.today().isoformat(),
-                }
-        else:
-            continue
-        break
+    # Overton: policy documents that mention the phrases, or cite a core paper
+    overton_runs = [(label, f'"{ph}"', {"query": f'"{ph}"'})
+                    for label, phrases in SEARCHES.items() for ph in phrases]
+    overton_runs += [(CITES_LABEL, f"citing {e['doi']}", {"plain_dois_cited": norm_doi(e["doi"])})
+                     for e in existing if e.get("core") and e.get("doi")]
+    for label, desc, params in overton_runs:
+        docs = overton_search(params)
+        if docs is None:
+            print("Overton: skipped (no OVERTON_API_KEY set)")
+            break
+        print(f'{desc}: {len(docs)} results from Overton')
+        for d in docs:
+            pid = str(d.get("policy_document_id") or "")
+            if not pid or not d.get("title"):
+                continue
+            key = "overton:" + pid.lower()
+            url = d.get("document_url") or d.get("pdf_url") or \
+                f"https://app.overton.io/document.php?policy_document_id={pid}"
+            if key in found:
+                if label not in found[key]["mentions"]:
+                    found[key]["mentions"].append(label)
+                continue
+            if key in known or key in seen or url.strip().lower() in known:
+                continue
+            src = d.get("source") or {}
+            found[key] = {
+                "type": "policy",
+                "title": re.sub(r"\s+", " ", d["title"]).strip(),
+                "year": overton_year(d),
+                "source": src.get("title"),
+                "url": url,
+                "overton_id": pid,
+                "mentions": [label],
+                "added": dt.date.today().isoformat(),
+            }
 
     new = sorted(found.values(), key=lambda i: -(i.get("year") or 0))
     print(f"{len(new)} new item(s)")

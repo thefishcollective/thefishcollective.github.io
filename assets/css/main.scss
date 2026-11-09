@@ -625,3 +625,23 @@ a.impact-box:hover { background: #0a7489; }
   font-weight: 600;
   color: #005f73;
 }
+
+/* Impact page: total reach and citing papers */
+.impact-box.impact-box-main { background: #0a9396; }
+
+.pub-card.pub-citing { border-left-color: #94d2bd; }
+
+.impact-details { margin: 0.5rem 0 1rem; }
+
+.impact-details > summary {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  background: #e6f0f2;
+  color: #005f73;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.impact-details[open] > summary { margin-bottom: 0.5rem; }
