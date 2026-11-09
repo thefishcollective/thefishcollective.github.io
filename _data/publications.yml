@@ -658,3 +658,14 @@
   doi: "10.1371/journal.pone.0265067"
   mentions: ["GlobalArchive"]
   added: 2026-11-08
+
+# --- Added automatically 2026-11-09 (check before merging) ---
+
+- type: paper
+  title: "The politics of cloning: mapping the rhetorical convergence of embryos and stem cells in parliamentary debates"
+  authors: "Sarah Parry"
+  year: 2003
+  journal: "New Genetics and Society"
+  doi: "10.1080/1463677032000102594"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-09
