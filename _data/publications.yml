@@ -5,9 +5,11 @@
 # type: website -> Websites & media      (needs url; `source` = site name)
 # type: policy  -> Policy & government documents (needs url; `source` = agency)
 #
+# core: true   -> listed in the top "Core Fish Collective papers" section
 # Optional fields: authors, journal, source, mentions, overton_id, added (YYYY-MM-DD)
 
 - type: paper
+  core: true
   title: "CheckEM: An open-source toolkit for standardising, cleaning and visualising stereo-video fish survey data"
   authors: "Gibbons et al."
   year: 2026
@@ -15,6 +17,7 @@
   doi: "10.1111/2041-210X.70287"
 
 - type: paper
+  core: true
   title: "Benthic Observation Survey System (BOSS) for surveys of marine benthic habitats"
   authors: "Langlois et al."
   year: 2025
@@ -22,6 +25,7 @@
   doi: "10.1111/2041-210X.70010"
 
 - type: paper
+  core: true
   title: "Effects of human footprint and biophysical factors on the body-size structure of fished marine species"
   authors: "Bosch et al."
   year: 2022
@@ -29,6 +33,7 @@
   doi: "10.1111/cobi.13807"
 
 - type: paper
+  core: true
   title: "Increased connectivity and depth improve the effectiveness of marine reserves"
   authors: "Goetze et al."
   year: 2021
@@ -36,6 +41,7 @@
   doi: "10.1111/gcb.15635"
 
 - type: paper
+  core: true
   title: "The BRUVs workshop – An Australia-wide synthesis of baited remote underwater video data to answer broad-scale ecological questions about fish, sharks and rays"
   authors: "Harvey et al."
   year: 2021
@@ -43,6 +49,7 @@
   doi: "10.1016/j.marpol.2021.104430"
 
 - type: paper
+  core: true
   title: "A field and video annotation guide for baited remote underwater stereo-video surveys of demersal fish assemblages"
   authors: "Langlois et al."
   year: 2020
@@ -50,6 +57,7 @@
   doi: "10.1111/2041-210X.13470"
 
 - type: paper
+  core: true
   title: "A field and video analysis guide for diver operated stereo-video"
   authors: "Goetze et al."
   year: 2019

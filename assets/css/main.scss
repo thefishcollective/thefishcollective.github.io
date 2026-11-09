@@ -573,3 +573,55 @@ search: false
   color: #888;
   font-style: italic;
 }
+
+/* Impact page: summary boxes, core papers, citation counts */
+.impact-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.impact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  border-radius: 8px;
+  background: #005f73;
+  color: #fff !important;
+  text-decoration: none !important;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+a.impact-box:hover { background: #0a7489; }
+
+.impact-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.impact-label {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.impact-note {
+  text-align: left;
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0;
+}
+
+.pub-card.pub-core { border-left-color: #94d2bd; }
+
+.pub-cites {
+  display: inline-block;
+  margin-left: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #005f73;
+}

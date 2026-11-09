@@ -1,0 +1,18 @@
+{% comment %} One entry on the Impact page. Used by _pages/impact.md. {% endcomment %}
+{% assign pub = include.pub %}
+{% if pub.doi %}{% assign link = "https://doi.org/" | append: pub.doi %}{% else %}{% assign link = pub.url %}{% endif %}
+<div class="pub-card pub-{{ pub.type }}{% if pub.core %} pub-core{% endif %}"{% if pub.doi %} data-doi="{{ pub.doi }}" data-group="{% if pub.core %}core{% else %}mention{% endif %}"{% endif %}>
+  <div class="pub-year">{{ pub.year }}</div>
+  <div class="pub-text">
+    <a href="{{ link }}" target="_blank" rel="noopener">
+      <h3>{{ pub.title }}</h3>
+    </a>
+    <p class="pub-meta">
+      {% if pub.authors %}{{ pub.authors }} &middot; {% endif %}
+      {% if pub.journal %}<em>{{ pub.journal }}</em>{% elsif pub.source %}{{ pub.source }}{% endif %}
+      {% if pub.mentions %}<span class="pub-tags">{% for m in pub.mentions %}<span class="pub-tag">{{ m }}</span>{% endfor %}</span>{% endif %}
+    </p>
+    <a class="pub-doi" href="{{ link }}" target="_blank" rel="noopener">{% if pub.doi %}doi.org/{{ pub.doi }}{% else %}{{ link | remove: "https://" | remove: "http://" | truncate: 80 }}{% endif %}</a>
+    {% if pub.doi %}<span class="pub-cites"></span>{% endif %}
+  </div>
+</div>
