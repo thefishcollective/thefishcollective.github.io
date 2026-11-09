@@ -53,19 +53,51 @@ TYPE_MAP = {
     "report": "policy",
 }
 
-# A paper is only suggested if its title, abstract, topics or keywords touch one
-# of these themes. Edit this list to widen or narrow what gets through.
-THEMES = [
-    r"fish", r"marine", r"ocean", r"\bsea\b", r"seafloor", r"seabed", r"coast", r"reef", r"estuar",
-    r"kelp", r"seagrass", r"benthic", r"demersal", r"pelagic", r"shark", r"\brays?\b", r"elasmobranch",
-    r"biodiversit", r"ecolog", r"ecosystem", r"conservation", r"habitat",
-    r"protected area", r"\bmpas?\b", r"marine park", r"sanctuar", r"aquatic",
-    r"bruv", r"stereo[- ]?video", r"underwater video", r"remote video", r"\bboss\b", r"\bdov\b",
-    r"video annotation",
-    r"\bfair\b", r"reproducib", r"workflow", r"open data", r"data management", r"data synthesis",
-    r"data standard",
+# Only papers published from this date on are suggested.
+FROM_DATE = "2016-01-01"
+
+# Which papers get suggested (title, abstract, topics and keywords are checked):
+#  1. A STRONG term (clearly our field) -> suggested, unless it hits a label-specific exclusion.
+#  2. Otherwise it needs a WEAK term AND OpenAlex must class it under one of
+#     ALLOWED_FIELDS AND it must not contain any EXCLUDE_ALL term.
+# Edit these lists to widen or narrow what gets through.
+STRONG = [
+    r"\bfish(es|ing|eries|ery|ers)?\b", r"\bmarine\b", r"\breefs?\b", r"\bsharks?\b", r"elasmobranch",
+    r"stingray", r"benthic", r"demersal", r"pelagic", r"seagrass", r"\bkelp", r"estuar",
+    r"seafloor", r"seabed", r"protected areas?", r"\bmpas?\b", r"marine park", r"sanctuary zone",
+    r"\bbruvs?\b", r"stereo[- ]?video", r"underwater video", r"remote underwater", r"video annotation",
+    r"globalarchive", r"checkem",
 ]
-THEME_RE = re.compile("|".join(THEMES), re.I)
+WEAK = [
+    r"\bocean", r"\bseas?\b", r"\bcoast", r"aquatic", r"biodiversit", r"ecolog", r"ecosystem",
+    r"conservation", r"habitat", r"reproducib", r"workflow", r"open data", r"data management",
+    r"data synthesis", r"data standard",
+]
+ALLOWED_FIELDS = {
+    "Environmental Science", "Agricultural and Biological Sciences", "Earth and Planetary Sciences",
+    "Computer Science", "Decision Sciences",
+}
+EXCLUDE_ALL = [
+    # protein / drug / medical
+    r"crystallograph", r"\bproteins?\b", r"macromolec", r"in silico", r"docking", r"\bpdb\b", r"cryo",
+    r"microscop", r"antibod", r"\bdrugs?\b", r"pharma", r"cancer", r"tumou?r", r"clinical", r"patients?\b",
+    r"genom", r"\bkinase", r"ligand",
+    # satellites, geology, weather
+    r"satellite", r"landsat", r"sentinel-?\d", r"\bsar\b", r"volcan", r"seismic", r"earthquake",
+    r"landslide", r"geotechn", r"\bsoils?\b", r"precipitation", r"rainfall", r"groundwater",
+    r"hydrolog", r"glacier", r"paleo", r"palaeo",
+    # algorithms / engineering
+    r"optimi[sz]ation", r"pareto", r"multi-?objective", r"evolutionary algorithm", r"metaheuristic",
+    r"scheduling", r"constellation",
+    # land plants
+    r"germination", r"\bseeds?\b", r"forest", r"\bcrops?\b",
+    # humanities
+    r"colonial", r"empire", r"literary", r"literature review of novels", r"memoryscape", r"poetic",
+]
+STRONG_RE = re.compile("|".join(STRONG), re.I)
+WEAK_RE = re.compile("|".join(WEAK), re.I)
+EXCLUDE_ALL_RE = re.compile("|".join(EXCLUDE_ALL), re.I)
+FAIR_RE = re.compile(r"\bFAIR\b")  # FAIR data principles, capitals only (not "fair")
 
 # "The Fish Collective" also appears in studies of shoaling ("the fish collective behaviour").
 EXCLUDE = {
@@ -79,10 +111,8 @@ def work_text(w):
     parts = [w.get("title") or ""]
     parts += list((w.get("abstract_inverted_index") or {}).keys())
     for t in [w.get("primary_topic") or {}] + (w.get("topics") or []):
-        for f in ("display_name",):
-            parts.append(str(t.get(f) or ""))
-        for lvl in ("subfield", "field", "domain"):
-            parts.append(str((t.get(lvl) or {}).get("display_name") or ""))
+        parts.append(str(t.get("display_name") or ""))
+        parts.append(str((t.get("subfield") or {}).get("display_name") or ""))
     parts += [k.get("display_name") or "" for k in (w.get("keywords") or [])]
     return " ".join(parts)
 
@@ -91,7 +121,12 @@ def relevant(label, w):
     text = work_text(w)
     if label in EXCLUDE and EXCLUDE[label].search(text):
         return False
-    return bool(THEME_RE.search(text))
+    if STRONG_RE.search(text):
+        return True
+    field = ((w.get("primary_topic") or {}).get("field") or {}).get("display_name")
+    return bool((WEAK_RE.search(text) or FAIR_RE.search(text))
+                and field in ALLOWED_FIELDS
+                and not EXCLUDE_ALL_RE.search(text))
 
 
 PER_PAGE = 200
@@ -134,7 +169,7 @@ def search(phrase):
     results, cursor = [], "*"
     for _ in range(MAX_PAGES):
         data = get_json({
-            "filter": f'fulltext.search.exact:"{phrase}"',
+            "filter": f'fulltext.search.exact:"{phrase}",from_publication_date:{FROM_DATE}',
             "per_page": PER_PAGE,
             "cursor": cursor,
             "select": "id,doi,title,publication_year,type,authorships,primary_location,"
