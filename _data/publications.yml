@@ -1,44 +1,56 @@
-# Research papers that have come from the Fish Collective.
-# Shown on the Impact page (/impact/), newest first.
-# To add a paper, copy a block and fill in the fields.
+# Impact: everything that mentions or uses GlobalArchive, The Fish Collective or CheckEM.
+# Shown on /impact/, grouped by `type`, newest first.
+#
+# type: paper   -> Peer-reviewed papers  (needs doi OR url)
+# type: website -> Websites & media      (needs url; `source` = site name)
+# type: policy  -> Policy & government documents (needs url; `source` = agency)
+#
+# Optional fields: authors, journal, source, mentions, overton_id, added (YYYY-MM-DD)
 
-- title: "CheckEM: An open-source toolkit for standardising, cleaning and visualising stereo-video fish survey data"
+- type: paper
+  title: "CheckEM: An open-source toolkit for standardising, cleaning and visualising stereo-video fish survey data"
   authors: "Gibbons et al."
   year: 2026
   journal: "Methods in Ecology and Evolution"
   doi: "10.1111/2041-210X.70287"
 
-- title: "Benthic Observation Survey System (BOSS) for surveys of marine benthic habitats"
+- type: paper
+  title: "Benthic Observation Survey System (BOSS) for surveys of marine benthic habitats"
   authors: "Langlois et al."
   year: 2025
   journal: "Methods in Ecology and Evolution"
   doi: "10.1111/2041-210X.70010"
 
-- title: "Effects of human footprint and biophysical factors on the body-size structure of fished marine species"
+- type: paper
+  title: "Effects of human footprint and biophysical factors on the body-size structure of fished marine species"
   authors: "Bosch et al."
   year: 2022
   journal: "Conservation Biology"
   doi: "10.1111/cobi.13807"
 
-- title: "Increased connectivity and depth improve the effectiveness of marine reserves"
+- type: paper
+  title: "Increased connectivity and depth improve the effectiveness of marine reserves"
   authors: "Goetze et al."
   year: 2021
   journal: "Global Change Biology"
   doi: "10.1111/gcb.15635"
 
-- title: "The BRUVs workshop – An Australia-wide synthesis of baited remote underwater video data to answer broad-scale ecological questions about fish, sharks and rays"
+- type: paper
+  title: "The BRUVs workshop – An Australia-wide synthesis of baited remote underwater video data to answer broad-scale ecological questions about fish, sharks and rays"
   authors: "Harvey et al."
   year: 2021
   journal: "Marine Policy"
   doi: "10.1016/j.marpol.2021.104430"
 
-- title: "A field and video annotation guide for baited remote underwater stereo-video surveys of demersal fish assemblages"
+- type: paper
+  title: "A field and video annotation guide for baited remote underwater stereo-video surveys of demersal fish assemblages"
   authors: "Langlois et al."
   year: 2020
   journal: "Methods in Ecology and Evolution"
   doi: "10.1111/2041-210X.13470"
 
-- title: "A field and video analysis guide for diver operated stereo-video"
+- type: paper
+  title: "A field and video analysis guide for diver operated stereo-video"
   authors: "Goetze et al."
   year: 2019
   journal: "Methods in Ecology and Evolution"
@@ -362,3 +374,48 @@
   doi: "10.1371/journal.pone.0265067"
   mentions: ["GlobalArchive"]
   added: 2026-11-08
+
+# --- Policy documents mentioning GlobalArchive.org (found in Overton, added by hand 2026-11-09) ---
+
+- type: policy
+  title: "Assessing space use and abundance of marine fishes to evaluate the conservation benefit of South Australia's Marine Parks Network"
+  source: "Government of South Australia (Department for Environment and Water)"
+  url: "https://data.environment.sa.gov.au/Content/Publications/Space_use_and_abundance_of_marine_fishes_in_SA_marine_parks.pdf"
+  overton_id: "stateofsouthaustralia-feef1e5bda6efc458bca95402941be6f"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-09
+
+- type: policy
+  title: "Review of the South Coast marine areas for reservation 2021"
+  year: 2021
+  source: "Government of Western Australia"
+  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-868b37a070aff3d67bb653fb26fde1bf"
+  overton_id: "stateofwesternaustralia-868b37a070aff3d67bb653fb26fde1bf"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-09
+
+- type: policy
+  title: "Biodiversity and Conservation Science Annual Report 2021-22"
+  year: 2022
+  source: "Government of Western Australia"
+  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-251f76b2af3c68e05f95023e557b4b8d"
+  overton_id: "stateofwesternaustralia-251f76b2af3c68e05f95023e557b4b8d"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-09
+
+- type: policy
+  title: "Annual Report 2022-2023"
+  year: 2023
+  source: "Government of Western Australia"
+  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-126fe4a90834606197743b32097ded53"
+  overton_id: "stateofwesternaustralia-126fe4a90834606197743b32097ded53"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-09
+
+- type: policy
+  title: "Biodiversity and Conservation Science Annual Report"
+  source: "Government of Western Australia"
+  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-7bd3ce8993895bf0411b0a734caa2b9b"
+  overton_id: "stateofwesternaustralia-7bd3ce8993895bf0411b0a734caa2b9b"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-09
