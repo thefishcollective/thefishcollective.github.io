@@ -22,6 +22,7 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -52,6 +53,47 @@ TYPE_MAP = {
     "report": "policy",
 }
 
+# A paper is only suggested if its title, abstract, topics or keywords touch one
+# of these themes. Edit this list to widen or narrow what gets through.
+THEMES = [
+    r"fish", r"marine", r"ocean", r"\bsea\b", r"seafloor", r"seabed", r"coast", r"reef", r"estuar",
+    r"kelp", r"seagrass", r"benthic", r"demersal", r"pelagic", r"shark", r"\brays?\b", r"elasmobranch",
+    r"biodiversit", r"ecolog", r"ecosystem", r"conservation", r"habitat",
+    r"protected area", r"\bmpas?\b", r"marine park", r"sanctuar", r"aquatic",
+    r"bruv", r"stereo[- ]?video", r"underwater video", r"remote video", r"\bboss\b", r"\bdov\b",
+    r"video annotation",
+    r"\bfair\b", r"reproducib", r"workflow", r"open data", r"data management", r"data synthesis",
+    r"data standard",
+]
+THEME_RE = re.compile("|".join(THEMES), re.I)
+
+# "The Fish Collective" also appears in studies of shoaling ("the fish collective behaviour").
+EXCLUDE = {
+    "The Fish Collective": re.compile(r"collective (behavio|motion|movement|dynamic|decision|state)|"
+                                      r"shoal|schooling|swarm|flocking", re.I),
+}
+
+
+def work_text(w):
+    """Title, abstract, topics and keywords of an OpenAlex work as one string."""
+    parts = [w.get("title") or ""]
+    parts += list((w.get("abstract_inverted_index") or {}).keys())
+    for t in [w.get("primary_topic") or {}] + (w.get("topics") or []):
+        for f in ("display_name",):
+            parts.append(str(t.get(f) or ""))
+        for lvl in ("subfield", "field", "domain"):
+            parts.append(str((t.get(lvl) or {}).get("display_name") or ""))
+    parts += [k.get("display_name") or "" for k in (w.get("keywords") or [])]
+    return " ".join(parts)
+
+
+def relevant(label, w):
+    text = work_text(w)
+    if label in EXCLUDE and EXCLUDE[label].search(text):
+        return False
+    return bool(THEME_RE.search(text))
+
+
 PER_PAGE = 200
 MAX_PAGES = 5
 API = "https://api.openalex.org/works"
@@ -72,7 +114,16 @@ def get_json(params):
         try:
             with urllib.request.urlopen(req, timeout=60) as r:
                 return json.load(r)
-        except Exception as e:  # retry on network errors / 429 / 5xx
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403):
+                sys.exit("OpenAlex refused the request (HTTP %s). The free keyless allowance is shared by "
+                         "GitHub's runners and is often used up: add a free OpenAlex API key as the "
+                         "repository secret OPENALEX_API_KEY (https://openalex.org/settings/api-key)." % e.code)
+            if attempt == 3:
+                raise
+            print(f"  retrying after error: {e}", file=sys.stderr)
+            time.sleep(5 * (attempt + 1))
+        except Exception as e:  # retry on network errors
             if attempt == 3:
                 raise
             print(f"  retrying after error: {e}", file=sys.stderr)
@@ -86,7 +137,8 @@ def search(phrase):
             "filter": f'fulltext.search.exact:"{phrase}"',
             "per_page": PER_PAGE,
             "cursor": cursor,
-            "select": "id,doi,title,publication_year,type,authorships,primary_location",
+            "select": "id,doi,title,publication_year,type,authorships,primary_location,"
+                      "abstract_inverted_index,primary_topic,topics,keywords",
         })
         results += data.get("results", [])
         cursor = data.get("meta", {}).get("next_cursor")
@@ -205,9 +257,13 @@ def main():
             works = search(phrase)
             print(f'"{phrase}": {len(works)} results from OpenAlex')
             hits += [(label, w) for w in works]
+    off_topic = 0
     for label, w in hits:
         section = TYPE_MAP.get(w.get("type"))
         if not section or not w.get("title"):
+            continue
+        if not relevant(label, w):
+            off_topic += 1
             continue
         doi = norm_doi(w.get("doi"))
         key = doi or (w.get("id") or "").lower()
@@ -271,6 +327,7 @@ def main():
                 "added": dt.date.today().isoformat(),
             }
 
+    print(f"{off_topic} OpenAlex result(s) skipped as off-topic")
     new = sorted(found.values(), key=lambda i: -(i.get("year") or 0))
     print(f"{len(new)} new item(s)")
     for i in new:
