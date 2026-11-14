@@ -430,3 +430,32 @@
 
 # --- Added automatically 2026-11-09 (check before merging) ---
 
+
+# --- Added automatically 2026-11-14 (check before merging) ---
+
+- type: paper
+  title: "Fragment-level FAIRness: annotating scientific data and its provenance using data fragment selectors"
+  authors: "Weil et al."
+  year: 2026
+  journal: "Berichte aus der medizinischen Informatik und Bioinformatik/Journal of integrative bioinformatics"
+  doi: "10.1515/jib-2025-0052"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-14
+
+- type: paper
+  title: "A new automatic quality control system for ocean profile observations and impact on ocean warming estimate"
+  authors: "Tan et al."
+  year: 2022
+  journal: "Deep Sea Research Part I Oceanographic Research Papers"
+  doi: "10.1016/j.dsr.2022.103961"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-14
+
+- type: paper
+  title: "Isolated reefs support stable fish communities with high abundances of regionally fished species"
+  authors: "Birt et al."
+  year: 2021
+  journal: "Ecology and Evolution"
+  doi: "10.1002/ece3.7370"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-14
