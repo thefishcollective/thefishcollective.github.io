@@ -20,7 +20,7 @@ header:
 <nav class="impact-toc" aria-label="On this page">
   <span class="impact-toc-label">On this page:</span>
   <a href="#core">Core papers</a>
-  <a href="#paper">Papers using or mentioning our tools</a>
+  <a href="#paper">Work using our tools</a>
   {% if websites.size > 0 %}<a href="#website">Websites &amp; media</a>{% endif %}
   <a href="#citing">Papers citing our core papers</a>
   <a href="#policy">Policy &amp; government documents</a>
@@ -50,7 +50,7 @@ header:
   {% for pub in core %}{% include impact-card.html pub=pub %}{% endfor %}
 </div>
 
-<h2 class="pub-section" id="paper">Papers using or mentioning our tools <span class="pub-count">{{ papers | size }}</span></h2>
+<h2 class="pub-section" id="paper">Work using our tools <span class="pub-count">{{ papers | size }}</span></h2>
 <div class="pub-list">
   {% for pub in papers %}{% include impact-card.html pub=pub %}{% endfor %}
 </div>
