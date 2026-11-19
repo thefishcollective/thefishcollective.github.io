@@ -29,16 +29,16 @@ header:
 <p class="pub-intro">Papers published by the Fish Collective, and the work by others that cites them or mentions GlobalArchive, The Fish Collective, CheckEM or the Australian BRUVS Working Group.</p>
 <div class="impact-boxes">
   <a class="impact-box impact-box-core" href="#core">
-    <span class="impact-value" id="core-cites">&hellip;</span>
+    <span class="impact-value" id="core-cites"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span>
     <span class="impact-label">Citations of our core papers</span>
     <span class="impact-sub">across {{ core | size }} core Fish Collective papers</span>
   </a>
   <div class="impact-box impact-box-main">
-    <span class="impact-value" id="reach-total">&hellip;</span>
+    <span class="impact-value" id="reach-total"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span>
     <span class="impact-label">Papers reached in total</span>
   </div>
   <a class="impact-box" href="#citing">
-    <span class="impact-value" id="citing-count">&hellip;</span>
+    <span class="impact-value" id="citing-count"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span>
     <span class="impact-label">Papers citing our core papers</span>
   </a>
   <a class="impact-box" href="#paper">
@@ -70,10 +70,10 @@ header:
 </div>
 {% endif %}
 
-<h2 class="pub-section" id="citing">Papers citing our core papers <span class="pub-count" id="citing-count-2">&hellip;</span></h2>
+<h2 class="pub-section" id="citing">Papers citing our core papers <span class="pub-count" id="citing-count-2"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span></h2>
 <details class="impact-details">
   <summary>Show all citing papers</summary>
-  <div class="pub-list" id="citing-list"><p class="pub-empty">Loading from OpenAlex&hellip;</p></div>
+  <div class="pub-list" id="citing-list"><p class="pub-empty"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span> Loading from OpenAlex</p></div>
 </details>
 
 <h2 class="pub-section" id="policy">Policy &amp; government documents <span class="pub-count">{{ policy | size }}</span></h2>
