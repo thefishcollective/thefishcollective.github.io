@@ -645,3 +645,9 @@ a.impact-box:hover { background: #0a7489; }
 }
 
 .impact-details[open] > summary { margin-bottom: 0.5rem; }
+
+/* Impact page: "Cites ..." chips */
+.pub-tag.pub-tag-cites {
+  background: #e6f0f2;
+  color: #005f73;
+}

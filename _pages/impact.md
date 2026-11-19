@@ -93,21 +93,24 @@ header:
     return getJson(API + "?per_page=50&select=id,doi,cited_by_count&filter=doi:" + list.map(encodeURIComponent).join("|"))
       .then(function (j) { return j.results || []; }).catch(function () { return []; });
   })).then(function (parts) {
-    var coreIds = [];
+    var coreIds = [], coreLabels = {};
     parts.forEach(function (results) {
       results.forEach(function (w) {
         (byDoi[cleanDoi(w.doi)] || []).forEach(function (c) {
           var slot = c.querySelector(".pub-cites");
           if (slot) slot.textContent = "Cited by " + (w.cited_by_count || 0).toLocaleString();
-          if (c.getAttribute("data-group") === "core") coreIds.push(w.id.split("/").pop());
+          if (c.getAttribute("data-group") === "core") {
+            coreIds.push(w.id.split("/").pop());
+            coreLabels[w.id] = c.getAttribute("data-label") || "Core paper";
+          }
         });
       });
     });
-    return loadCiting(coreIds);
+    return loadCiting(coreIds, coreLabels);
   }).catch(function () { fail(); });
 
   // 2. Every work citing any core paper (each counted once), newest first.
-  function loadCiting(coreIds) {
+  function loadCiting(coreIds, coreLabels) {
     if (!coreIds.length) return fail();
     var coreSet = {};
     coreIds.forEach(function (id) { coreSet[id] = true; });
@@ -115,7 +118,7 @@ header:
     // Numbered pages: OpenAlex only allows cursor paging with an API key.
     function page(n) {
       var url = API + "?filter=cites:" + coreIds.join("|") + "&sort=publication_date:desc&per_page=200&page=" + n +
-        "&select=id,doi,title,publication_year,primary_location,authorships";
+        "&select=id,doi,title,publication_year,primary_location,authorships,referenced_works";
       return getJson(url).then(function (j) {
         var res = j.results || [];
         works = works.concat(res);
@@ -131,11 +134,11 @@ header:
       setText("citing-count", all.length.toLocaleString());
       setText("citing-count-2", all.length.toLocaleString());
       setText("reach-total", union.toLocaleString());
-      render(all);
+      render(all, coreLabels);
     });
   }
 
-  function render(list) {
+  function render(list, coreLabels) {
     var box = document.getElementById("citing-list");
     if (!box) return;
     box.innerHTML = "";
@@ -151,7 +154,14 @@ header:
         '<p class="pub-meta"></p><a class="pub-doi" target="_blank" rel="noopener"></a></div>';
       card.querySelector(".pub-year").textContent = w.publication_year || "";
       card.querySelector("h3").textContent = w.title || "Untitled";
-      card.querySelector(".pub-meta").innerHTML = (who ? escapeHtml(who) + " &middot; " : "") + (src ? "<em>" + escapeHtml(src) + "</em>" : "");
+      // chips for the core paper(s) this work cites, oldest first
+      var cited = (w.referenced_works || []).filter(function (r) { return coreLabels[r]; })
+        .map(function (r) { return coreLabels[r]; })
+        .sort(function (x, y) { return x.slice(-4) - y.slice(-4); });
+      var chips = cited.length ? ' <span class="pub-tags">' + cited.map(function (l) {
+        return '<span class="pub-tag pub-tag-cites">Cites ' + escapeHtml(l) + "</span>";
+      }).join("") + "</span>" : "";
+      card.querySelector(".pub-meta").innerHTML = (who ? escapeHtml(who) + " &middot; " : "") + (src ? "<em>" + escapeHtml(src) + "</em>" : "") + chips;
       var links = card.querySelectorAll("a");
       links[0].href = link; links[1].href = link;
       links[1].textContent = link.replace(/^https?:\/\//, "");

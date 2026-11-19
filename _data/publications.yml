@@ -386,41 +386,6 @@
 # --- Policy documents mentioning GlobalArchive.org (found in Overton, added by hand 2026-11-09) ---
 
 - type: policy
-  title: "Assessing space use and abundance of marine fishes to evaluate the conservation benefit of South Australia's Marine Parks Network"
-  source: "Government of South Australia (Department for Environment and Water)"
-  url: "https://data.environment.sa.gov.au/Content/Publications/Space_use_and_abundance_of_marine_fishes_in_SA_marine_parks.pdf"
-  overton_id: "stateofsouthaustralia-feef1e5bda6efc458bca95402941be6f"
-  mentions: ["GlobalArchive"]
-  added: 2026-11-09
-
-- type: policy
-  title: "Review of the South Coast marine areas for reservation 2021"
-  year: 2021
-  source: "Government of Western Australia"
-  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-868b37a070aff3d67bb653fb26fde1bf"
-  overton_id: "stateofwesternaustralia-868b37a070aff3d67bb653fb26fde1bf"
-  mentions: ["GlobalArchive"]
-  added: 2026-11-09
-
-- type: policy
-  title: "Biodiversity and Conservation Science Annual Report 2021-22"
-  year: 2022
-  source: "Government of Western Australia"
-  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-251f76b2af3c68e05f95023e557b4b8d"
-  overton_id: "stateofwesternaustralia-251f76b2af3c68e05f95023e557b4b8d"
-  mentions: ["GlobalArchive"]
-  added: 2026-11-09
-
-- type: policy
-  title: "Annual Report 2022-2023"
-  year: 2023
-  source: "Government of Western Australia"
-  url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-126fe4a90834606197743b32097ded53"
-  overton_id: "stateofwesternaustralia-126fe4a90834606197743b32097ded53"
-  mentions: ["GlobalArchive"]
-  added: 2026-11-09
-
-- type: policy
   title: "Biodiversity and Conservation Science Annual Report"
   source: "Government of Western Australia"
   url: "https://app.overton.io/document.php?policy_document_id=stateofwesternaustralia-7bd3ce8993895bf0411b0a734caa2b9b"
@@ -429,7 +394,6 @@
   added: 2026-11-09
 
 # --- Added automatically 2026-11-09 (check before merging) ---
-
 
 # --- Added automatically 2026-11-18 (check before merging) ---
 
@@ -442,6 +406,61 @@
   mentions: ["GlobalArchive"]
   added: 2026-11-18
 
+# --- Policy documents from Overton, checked by hand 2026-11-19 ---
+
+- type: policy
+  title: "Chief Scientist's annual review 2025"
+  year: 2026
+  source: "Environment Agency (UK)"
+  url: "https://assets.publishing.service.gov.uk/media/69cb728094c191d28596ed86/Chief_Scientist_s_annual_review_2025.pdf"
+  mentions: ["Cites Langlois et al. 2025"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Optimised Mardie Project: supporting document"
+  year: 2025
+  source: "Environmental Protection Authority (WA) referral"
+  url: "https://www.epa.wa.gov.au/sites/default/files/Referral_Documentation/Supporting%20document_5.pdf"
+  overton_id: "stateofwesternaustralia-2f708bf6859cfb805fe1c6af15108ac2"
+  mentions: ["Cites Harvey et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Mardie Project: dredge and spoil disposal management plan"
+  year: 2025
+  source: "Environmental Protection Authority (WA) referral"
+  url: "https://www.epa.wa.gov.au/sites/default/files/Referral_Documentation/Att3_DSDMP%20(O2%20Marine,%202025).pdf"
+  overton_id: "stateofwesternaustralia-a219a2950500a328f51d182bddb84351"
+  mentions: ["Cites Harvey et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Fish assemblages and benthic habitats in the Western Kangaroo Island state and Commonwealth Marine Parks recorded using baited remote underwater video systems (BRUVS)"
+  year: 2024
+  source: "Government of South Australia (Department for Environment and Water)"
+  url: "https://data.environment.sa.gov.au/Content/Publications/Western-Kangaroo-Island-Collaborative-Monitoring-Expedition.pdf"
+  overton_id: "stateofsouthaustralia-a5e5ae136a417bcf8719dd93633745e1"
+  mentions: ["Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Status reports of the fisheries and aquatic resources of Western Australia 2020/21"
+  year: 2024
+  source: "Department of Primary Industries and Regional Development (WA)"
+  url: "https://library.dpird.wa.gov.au/cgi/viewcontent.cgi?article=1014&context=an_sofar"
+  overton_id: "stateofwesternaustralia-43917738151aa005eea3c83f2f63508f"
+  mentions: ["Cites Bosch et al. 2022", "Cites Goetze et al. 2021", "Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "State of the fisheries: status reports of the fisheries and aquatic resources of Western Australia 2022/23"
+  year: 2024
+  source: "Department of Primary Industries and Regional Development (WA)"
+  url: "https://library.dpird.wa.gov.au/cgi/viewcontent.cgi?article=1015&context=an_sofar"
+  overton_id: "stateofwesternaustralia-a10ea6d7a1dd8026105275d76119e521"
+  mentions: ["Cites Bosch et al. 2022"]
+  added: 2026-11-19
+
 - type: policy
   title: "Complementary underwater imaging methods for collecting biological and environmental data. Volume 2: Photo and video analysis procedures"
   authors: "Robillard et al."
@@ -449,5 +468,123 @@
   source: "Fisheries and Oceans Canada (Maurice Lamontagne Institute)"
   url: "https://publications.gc.ca/collections/collection_2024/mpo-dfo/Fs97-6-3605-eng.pdf"
   overton_id: "governmentofcanada-fa47518234cbb94843ad15718308e57b"
-  mentions: ["GlobalArchive", "CheckEM"]
+  mentions: ["GlobalArchive", "CheckEM", "Cites Harvey et al. 2021", "Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Annual Report 2022-2023"
+  year: 2023
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://www.dbca.wa.gov.au/media/3408/download"
+  overton_id: "stateofwesternaustralia-126fe4a90834606197743b32097ded53"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-19
+
+- type: policy
+  title: "The social and economic value of the South Coast region"
+  year: 2023
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://www.dbca.wa.gov.au/media/3330/download"
+  overton_id: "stateofwesternaustralia-628a8e260656fe80171457885336e35d"
+  mentions: ["Cites Goetze et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Mardie Project: fish and fisheries factual report"
+  year: 2023
+  source: "Environmental Protection Authority (WA) referral"
+  url: "https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/Appendix%204.5%20Fish%20and%20Fisheries%20Factual%20Report.pdf"
+  overton_id: "stateofwesternaustralia-4057ed88b332ebe0791572b9c9b7d067"
+  mentions: ["Cites Harvey et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Mardie Project: dredge management plan"
+  year: 2023
+  source: "Environmental Protection Authority (WA) referral"
+  url: "https://www.epa.wa.gov.au/sites/default/files/Proponent_response_to_submissions/Appendix%204_Dredge%20Management%20Plan%20%28O2%20Marine%2C%202023%29.pdf"
+  overton_id: "stateofwesternaustralia-c36aa76c370cfc5f640b1355ae6a0542"
+  mentions: ["Cites Harvey et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Developing novel remote camera approaches to assess and monitor the population status of Australian sea lions"
+  year: 2023
+  source: "Department of Primary Industries and Regional Development (WA)"
+  url: "https://library.dpird.wa.gov.au/cgi/viewcontent.cgi?article=1121&context=fr_rr"
+  overton_id: "stateofwesternaustralia-3530fc7b97ad3a2c4df0420327cdcd90"
+  mentions: ["Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Biodiversity and Conservation Science Annual Report 2021-22"
+  year: 2022
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://www.epa.wa.gov.au/sites/default/files/Referral_Documentation/5.4%20Scientific%20Investigations%20and%20Reports%20-%20Att%204%20-%20Biodiversity%20and%20Conservation%20Science%20Annual%20Report%202021-2022.pdf"
+  overton_id: "stateofwesternaustralia-251f76b2af3c68e05f95023e557b4b8d"
+  mentions: ["GlobalArchive", "Cites Bosch et al. 2022", "Cites Goetze et al. 2021", "Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Assessing space use and abundance of marine fishes to evaluate the conservation benefit of South Australia's Marine Parks Network"
+  year: 2022
+  source: "Government of South Australia (Department for Environment and Water)"
+  url: "https://data.environment.sa.gov.au/Content/Publications/Space_use_and_abundance_of_marine_fishes_in_SA_marine_parks.pdf"
+  overton_id: "stateofsouthaustralia-feef1e5bda6efc458bca95402941be6f"
+  mentions: ["GlobalArchive", "Cites Harvey et al. 2021", "Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Australia state of the environment 2021: overview"
+  year: 2022
+  source: "Australian Government (DCCEEW)"
+  url: "https://soe.dcceew.gov.au/overview/about-chapter/approach"
+  overton_id: "apo-2a9c8b4f23e194f76afb7a071249011d"
+  mentions: ["Cites Bosch et al. 2022", "Cites Goetze et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Complementary underwater imaging methods for collecting biological and environmental data. Volume 1: Sampling devices"
+  authors: "Scallon-Chouinard et al."
+  year: 2022
+  source: "Fisheries and Oceans Canada (Maurice Lamontagne Institute)"
+  url: "https://publications.gc.ca/collections/collection_2022/mpo-dfo/Fs97-6-3507-eng.pdf"
+  overton_id: "governmentofcanada-c9332dcfb78a0c2f13fb7fa324df2895"
+  mentions: ["Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "South Coast marine park community information session: responses to questions (Albany)"
+  year: 2021
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://www.dbca.wa.gov.au/sites/default/files/2021-12/Community%20Information%20Session%20,%20responses%20to%20questions%20-%20Albany.pdf"
+  overton_id: "stateofwesternaustralia-a340dd296f15ccc4fe93cf1ae6a2b6bf"
+  mentions: ["Cites Goetze et al. 2021"]
+  added: 2026-11-19
+
+- type: policy
+  title: "South Coast marine park community information sessions: response to questions (Esperance)"
+  year: 2021
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://www.dbca.wa.gov.au/sites/default/files/2021-12/Community%20Information%20Session%20Questions%20-%20Esperance%20(Morning).pdf"
+  overton_id: "stateofwesternaustralia-e923366e467100749408512f30b88db7"
+  mentions: ["Cites Bosch et al. 2022"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Annual Report 2020-2021"
+  year: 2021
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://library.dbca.wa.gov.au/static/Journals/081046/081046-2020-2021.pdf"
+  overton_id: "stateofwesternaustralia-cf7f3108be815aa55aa00eb7784125d1"
+  mentions: ["Cites Harvey et al. 2021", "Cites Langlois et al. 2020"]
+  added: 2026-11-19
+
+- type: policy
+  title: "Review of the South Coast marine areas for reservation 2021"
+  year: 2021
+  source: "Department of Biodiversity, Conservation and Attractions (WA)"
+  url: "https://library.dbca.wa.gov.au/static/FullTextFiles/144510.pdf"
+  overton_id: "stateofwesternaustralia-868b37a070aff3d67bb653fb26fde1bf"
+  mentions: ["GlobalArchive"]
   added: 2026-11-19
