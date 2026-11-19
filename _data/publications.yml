@@ -441,3 +441,13 @@
   doi: "10.1002/ece3.7370"
   mentions: ["GlobalArchive"]
   added: 2026-11-18
+
+- type: policy
+  title: "Complementary underwater imaging methods for collecting biological and environmental data. Volume 2: Photo and video analysis procedures"
+  authors: "Robillard et al."
+  year: 2024
+  source: "Fisheries and Oceans Canada (Maurice Lamontagne Institute)"
+  url: "https://publications.gc.ca/collections/collection_2024/mpo-dfo/Fs97-6-3605-eng.pdf"
+  overton_id: "governmentofcanada-fa47518234cbb94843ad15718308e57b"
+  mentions: ["GlobalArchive", "CheckEM"]
+  added: 2026-11-19

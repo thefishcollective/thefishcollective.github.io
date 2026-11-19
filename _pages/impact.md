@@ -112,16 +112,18 @@ header:
     var coreSet = {};
     coreIds.forEach(function (id) { coreSet[id] = true; });
     var works = [];
-    function page(cursor, n) {
-      var url = API + "?filter=cites:" + coreIds.join("|") + "&sort=publication_date:desc&per_page=200&cursor=" +
-        encodeURIComponent(cursor) + "&select=id,doi,title,publication_year,primary_location,authorships";
+    // Numbered pages: OpenAlex only allows cursor paging with an API key.
+    function page(n) {
+      var url = API + "?filter=cites:" + coreIds.join("|") + "&sort=publication_date:desc&per_page=200&page=" + n +
+        "&select=id,doi,title,publication_year,primary_location,authorships";
       return getJson(url).then(function (j) {
-        works = works.concat(j.results || []);
-        var next = j.meta && j.meta.next_cursor;
-        return next && (j.results || []).length && n < 25 ? page(next, n + 1) : works;
+        var res = j.results || [];
+        works = works.concat(res);
+        var total = (j.meta && j.meta.count) || 0;
+        return res.length && works.length < total && n < 25 ? page(n + 1) : works;
       });
     }
-    return page("*", 1).then(function (all) {
+    return page(1).then(function (all) {
       // leave out the core papers citing each other
       all = all.filter(function (w) { return !coreSet[w.id.split("/").pop()]; });
       var union = mentionNoDoi + Object.keys(mentionDois).length;
