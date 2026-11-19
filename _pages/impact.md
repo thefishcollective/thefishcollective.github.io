@@ -29,9 +29,9 @@ header:
 <p class="pub-intro">Papers published by the Fish Collective, and the work by others that cites them or mentions GlobalArchive, The Fish Collective, CheckEM or the Australian BRUVS Working Group.</p>
 <div class="impact-boxes">
   <a class="impact-box impact-box-core" href="#core">
-    <span class="impact-value">{{ core | size }}</span>
-    <span class="impact-label">Core Fish Collective papers</span>
-    <span class="impact-sub" id="core-cites">&nbsp;</span>
+    <span class="impact-value" id="core-cites">&hellip;</span>
+    <span class="impact-label">Citations of our core papers</span>
+    <span class="impact-sub">across {{ core | size }} core Fish Collective papers</span>
   </a>
   <div class="impact-box impact-box-main">
     <span class="impact-value" id="reach-total">&hellip;</span>
@@ -120,7 +120,7 @@ header:
         });
       });
     });
-    if (coreIds.length) setText("core-cites", "cited " + coreCites.toLocaleString() + " times");
+    setText("core-cites", coreIds.length ? coreCites.toLocaleString() : "\u2013");
     return loadCiting(coreIds, coreLabels);
   }).catch(function () { fail(); });
 
@@ -188,7 +188,7 @@ header:
   function escapeHtml(t) { var d = document.createElement("div"); d.textContent = t; return d.innerHTML; }
 
   function fail() {
-    ["citing-count", "citing-count-2", "reach-total"].forEach(function (id) { setText(id, "\u2013"); });
+    ["core-cites", "citing-count", "citing-count-2", "reach-total"].forEach(function (id) { setText(id, "\u2013"); });
     var box = document.getElementById("citing-list");
     if (box) box.innerHTML = '<p class="pub-empty">Could not reach OpenAlex. Try reloading the page.</p>';
   }
