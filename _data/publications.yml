@@ -430,3 +430,14 @@
 
 # --- Added automatically 2026-11-09 (check before merging) ---
 
+
+# --- Added automatically 2026-11-18 (check before merging) ---
+
+- type: paper
+  title: "Isolated reefs support stable fish communities with high abundances of regionally fished species"
+  authors: "Birt et al."
+  year: 2021
+  journal: "Ecology and Evolution"
+  doi: "10.1002/ece3.7370"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-18
