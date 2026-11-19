@@ -29,28 +29,20 @@ header:
 <p class="pub-intro">Papers published by the Fish Collective, and the work by others that cites them or mentions GlobalArchive, The Fish Collective, CheckEM or the Australian BRUVS Working Group.</p>
 <div class="impact-boxes">
   <a class="impact-box impact-box-core" href="#core">
-    <span class="impact-value" id="core-cites"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span>
-    <span class="impact-label">Citations of our core papers</span>
-    <span class="impact-sub">across {{ core | size }} core Fish Collective papers</span>
+    <span class="impact-value">{{ core | size }}</span>
+    <span class="impact-label">Core Fish Collective papers</span>
+    <span class="impact-sub" id="core-cites">&nbsp;</span>
   </a>
-  <div class="impact-box impact-box-main">
+  <a class="impact-box impact-box-main" href="#paper">
     <span class="impact-value" id="reach-total"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span>
-    <span class="impact-label">Papers reached in total</span>
-  </div>
-  <a class="impact-box" href="#citing">
-    <span class="impact-value" id="citing-count"><span class="impact-loading" aria-label="Loading"><i></i><i></i><i></i></span></span>
-    <span class="impact-label">Papers citing our core papers</span>
-  </a>
-  <a class="impact-box" href="#paper">
-    <span class="impact-value">{{ papers | size }}</span>
-    <span class="impact-label">Papers using or mentioning our tools</span>
+    <span class="impact-label">Papers that cite or use our work</span>
   </a>
   <a class="impact-box" href="#policy">
     <span class="impact-value">{{ policy | size }}</span>
     <span class="impact-label">Policy &amp; government documents</span>
   </a>
 </div>
-<p class="impact-note">Citations from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, updated live. Papers that both cite and mention our work are counted once in the total.</p>
+<p class="impact-note">Each paper is counted once, even if it both cites and mentions our work. Citations from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, updated live.</p>
 
 <h2 class="pub-section" id="core">Core Fish Collective papers</h2>
 <p class="pub-intro">Papers published by the Fish Collective, describing its methods, tools and synthesis work.</p>
@@ -120,7 +112,7 @@ header:
         });
       });
     });
-    setText("core-cites", coreIds.length ? coreCites.toLocaleString() : "\u2013");
+    if (coreIds.length) setText("core-cites", "cited " + coreCites.toLocaleString() + " times in total");
     return loadCiting(coreIds, coreLabels);
   }).catch(function () { fail(); });
 
@@ -146,7 +138,6 @@ header:
       all = all.filter(function (w) { return !coreSet[w.id.split("/").pop()]; });
       var union = mentionNoDoi + Object.keys(mentionDois).length;
       all.forEach(function (w) { if (!mentionDois[cleanDoi(w.doi)]) union++; });
-      setText("citing-count", all.length.toLocaleString());
       setText("citing-count-2", all.length.toLocaleString());
       setText("reach-total", union.toLocaleString());
       render(all, coreLabels);
@@ -188,7 +179,7 @@ header:
   function escapeHtml(t) { var d = document.createElement("div"); d.textContent = t; return d.innerHTML; }
 
   function fail() {
-    ["core-cites", "citing-count", "citing-count-2", "reach-total"].forEach(function (id) { setText(id, "\u2013"); });
+    ["citing-count-2", "reach-total"].forEach(function (id) { setText(id, "\u2013"); });
     var box = document.getElementById("citing-list");
     if (box) box.innerHTML = '<p class="pub-empty">Could not reach OpenAlex. Try reloading the page.</p>';
   }
