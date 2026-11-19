@@ -1,6 +1,6 @@
 """
 Find new papers and policy documents that mention GlobalArchive, The Fish
-Collective or CheckEM (plus policy documents that cite a core paper), and add
+Collective, CheckEM or the Australian BRUVS Working Group (plus policy documents that cite a core paper), and add
 them to _data/publications.yml for review.
 
 Searches OpenAlex (papers: titles, abstracts and full text) and, when an
@@ -39,6 +39,8 @@ SEARCHES = {
     "GlobalArchive": ["GlobalArchive", "Global Archive"],
     "The Fish Collective": ["The Fish Collective"],
     "CheckEM": ["CheckEM"],
+    "Australian BRUVS Working Group": ["Australian BRUVS Working Group", "Australian BRUV Working Group",
+                                       "Australian BRUVs Working Group"],
 }
 
 # tag for Overton documents that cite one of the `core: true` papers
@@ -51,6 +53,15 @@ TYPE_MAP = {
     "letter": "paper",
     "book-chapter": "paper",
     "report": "policy",
+}
+
+# Papers whose titles contain one of our search phrases, so anything citing them
+# matches through its reference list. A work matching ONLY that phrase is skipped
+# if it cites one of these DOIs.
+FALSE_FRIEND_REFS = {
+    "Global Archive": [
+        "10.1093/nar/gky949",  # Protein Data Bank: the single global archive for 3D macromolecular structure data
+    ],
 }
 
 # Only papers published from this date on are suggested.
@@ -173,7 +184,7 @@ def search(phrase):
             "per_page": PER_PAGE,
             "cursor": cursor,
             "select": "id,doi,title,publication_year,type,authorships,primary_location,"
-                      "abstract_inverted_index,primary_topic,topics,keywords",
+                      "abstract_inverted_index,primary_topic,topics,keywords,referenced_works",
         })
         results += data.get("results", [])
         cursor = data.get("meta", {}).get("next_cursor")
@@ -286,14 +297,26 @@ def main():
         seen = {l.strip().lower() for l in open(SEEN_FILE, encoding="utf-8") if l.strip() and not l.startswith("#")}
 
     found = {}  # key -> item
+    # OpenAlex IDs of the "false friend" references, per phrase
+    friend_ids = {}
+    for phrase, dois in FALSE_FRIEND_REFS.items():
+        data = get_json({"filter": "doi:" + "|".join(dois), "select": "id", "per_page": 50})
+        friend_ids[phrase] = {r["id"] for r in data.get("results", [])}
+
     hits = []
     for label, phrases in SEARCHES.items():
         for phrase in phrases:
             works = search(phrase)
             print(f'"{phrase}": {len(works)} results from OpenAlex')
-            hits += [(label, w) for w in works]
-    off_topic = 0
-    for label, w in hits:
+            hits += [(label, phrase, w) for w in works]
+    # works that matched the phrase itself, not just through a cited title
+    real_match = {w.get("id") for _, ph, w in hits if ph not in FALSE_FRIEND_REFS}
+    off_topic = false_friend = 0
+    for label, phrase, w in hits:
+        if (phrase in friend_ids and w.get("id") not in real_match
+                and friend_ids[phrase] & set(w.get("referenced_works") or [])):
+            false_friend += 1
+            continue
         section = TYPE_MAP.get(w.get("type"))
         if not section or not w.get("title"):
             continue
@@ -366,6 +389,7 @@ def main():
             }
 
     print(f"{off_topic} OpenAlex result(s) skipped as off-topic")
+    print(f"{false_friend} OpenAlex result(s) skipped for only citing a paper with the phrase in its title")
     new = sorted(found.values(), key=lambda i: -(i.get("year") or 0))
     print(f"{len(new)} new item(s)")
     for i in new:

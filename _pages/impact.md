@@ -17,15 +17,22 @@ header:
 {% assign websites = all_items | where: "type", "website" %}
 {% assign policy = all_items | where: "type", "policy" %}
 
-<h2 class="pub-section" id="core">Core Fish Collective papers</h2>
-<p class="pub-intro">Papers published by the Fish Collective, describing its methods, tools and synthesis work.</p>
-<div class="pub-list">
-  {% for pub in core %}{% include impact-card.html pub=pub %}{% endfor %}
-</div>
+<nav class="impact-toc" aria-label="On this page">
+  <span class="impact-toc-label">On this page:</span>
+  <a href="#core">Core papers</a>
+  <a href="#paper">Papers using or mentioning our tools</a>
+  {% if websites.size > 0 %}<a href="#website">Websites &amp; media</a>{% endif %}
+  <a href="#citing">Papers citing our core papers</a>
+  <a href="#policy">Policy &amp; government documents</a>
+</nav>
 
-<h2 class="pub-section" id="reach">Reach</h2>
-<p class="pub-intro">Work by others that cites our core papers, or uses or mentions GlobalArchive, The Fish Collective or CheckEM.</p>
+<p class="pub-intro">Papers published by the Fish Collective, and the work by others that cites them or mentions GlobalArchive, The Fish Collective, CheckEM or the Australian BRUVS Working Group.</p>
 <div class="impact-boxes">
+  <a class="impact-box impact-box-core" href="#core">
+    <span class="impact-value">{{ core | size }}</span>
+    <span class="impact-label">Core Fish Collective papers</span>
+    <span class="impact-sub" id="core-cites">&nbsp;</span>
+  </a>
   <div class="impact-box impact-box-main">
     <span class="impact-value" id="reach-total">&hellip;</span>
     <span class="impact-label">Papers reached in total</span>
@@ -44,6 +51,12 @@ header:
   </a>
 </div>
 <p class="impact-note">Citations from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, updated live. Papers that both cite and mention our work are counted once in the total.</p>
+
+<h2 class="pub-section" id="core">Core Fish Collective papers</h2>
+<p class="pub-intro">Papers published by the Fish Collective, describing its methods, tools and synthesis work.</p>
+<div class="pub-list">
+  {% for pub in core %}{% include impact-card.html pub=pub %}{% endfor %}
+</div>
 
 <h2 class="pub-section" id="paper">Papers using or mentioning our tools <span class="pub-count">{{ papers | size }}</span></h2>
 <div class="pub-list">
@@ -93,7 +106,7 @@ header:
     return getJson(API + "?per_page=50&select=id,doi,cited_by_count&filter=doi:" + list.map(encodeURIComponent).join("|"))
       .then(function (j) { return j.results || []; }).catch(function () { return []; });
   })).then(function (parts) {
-    var coreIds = [], coreLabels = {};
+    var coreIds = [], coreLabels = {}, coreCites = 0;
     parts.forEach(function (results) {
       results.forEach(function (w) {
         (byDoi[cleanDoi(w.doi)] || []).forEach(function (c) {
@@ -102,10 +115,12 @@ header:
           if (c.getAttribute("data-group") === "core") {
             coreIds.push(w.id.split("/").pop());
             coreLabels[w.id] = c.getAttribute("data-label") || "Core paper";
+            coreCites += w.cited_by_count || 0;
           }
         });
       });
     });
+    if (coreIds.length) setText("core-cites", "cited " + coreCites.toLocaleString() + " times");
     return loadCiting(coreIds, coreLabels);
   }).catch(function () { fail(); });
 

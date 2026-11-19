@@ -651,3 +651,45 @@ a.impact-box:hover { background: #0a7489; }
   background: #e6f0f2;
   color: #005f73;
 }
+
+/* Impact page: core papers box */
+.impact-box.impact-box-core { background: #0b4f5c; }
+a.impact-box.impact-box-core:hover { background: #12687a; }
+
+.impact-sub {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+@media (min-width: 900px) {
+  .impact-boxes { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* Impact page: on-this-page links */
+.impact-toc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+.impact-toc-label {
+  color: #555;
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.impact-toc a {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: #e6f0f2;
+  color: #005f73;
+  text-decoration: none;
+}
+
+.impact-toc a:hover { background: #cfe3e7; }
+
+.pub-section { scroll-margin-top: 5rem; }
