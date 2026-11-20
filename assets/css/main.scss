@@ -724,3 +724,11 @@ a.impact-box.impact-box-core:hover { background: #12687a; }
 @media (prefers-reduced-motion: reduce) {
   .impact-loading i { animation: none; opacity: 0.7; }
 }
+
+/* Impact page: one-line note under an entry */
+.pub-note {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+}

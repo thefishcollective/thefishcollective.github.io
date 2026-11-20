@@ -5,7 +5,9 @@
 # type: website -> Websites & media      (needs url; `source` = site name)
 # type: policy  -> Policy & government documents (needs url; `source` = agency)
 #
-# core: true   -> listed in the top "Core Fish Collective papers" section
+# core: true   -> listed in the top "Core Fish Collective outputs" section
+# type: report  -> a core report (only shown in the core section)
+# note:         -> optional one-line note shown under the entry
 # Optional fields: authors, journal, source, mentions, overton_id, added (YYYY-MM-DD)
 
 - type: paper
@@ -588,3 +590,25 @@
   overton_id: "stateofwesternaustralia-868b37a070aff3d67bb653fb26fde1bf"
   mentions: ["GlobalArchive"]
   added: 2026-11-19
+
+# --- Core reports built on the Australian BRUV synthesis habitat data (added 2026-11-20) ---
+
+- type: report
+  core: true
+  title: "Designing a targeted monitoring program to support evidence-based management of Australian Marine Parks: National implementation"
+  authors: "Dunstan et al."
+  year: 2023
+  source: "Report to the National Environmental Science Program, Marine and Coastal Hub (CSIRO)"
+  url: "https://www.nespmarinecoastal.edu.au/wp-content/uploads/2023/08/Project-1.3-Final-report.pdf"
+  note: "Uses habitat data from the Australian BRUV synthesis (Section 2.2.2: Improved shelf reefs model)."
+  added: 2026-11-20
+
+- type: report
+  core: true
+  title: "Designing a targeted monitoring program to support evidence-based management of Australian Marine Parks: A pilot in the South-east Marine Park Network"
+  authors: "Hayes et al."
+  year: 2021
+  source: "Report to Parks Australia and the National Environmental Science Program, Marine Biodiversity Hub"
+  url: "https://www.nespmarinecoastal.edu.au/wp-content/uploads/2024/01/Hayes-et-al_SS2_M8_D7_M4_Designing-a-targeted-monitoring-program-to-support-evidence-based-management-of-AMPs.pdf"
+  note: "Uses habitat data from the Australian BRUV synthesis."
+  added: 2026-11-20

@@ -13,6 +13,7 @@
       {% if pub.mentions %}<span class="pub-tags">{% for m in pub.mentions %}<span class="pub-tag">{{ m }}</span>{% endfor %}</span>{% endif %}
     </p>
     <a class="pub-doi" href="{{ link }}" target="_blank" rel="noopener">{% if pub.doi %}doi.org/{{ pub.doi }}{% else %}{{ link | remove: "https://" | remove: "http://" | truncate: 80 }}{% endif %}</a>
+    {% if pub.note %}<p class="pub-note">{{ pub.note }}</p>{% endif %}
     {% if pub.doi %}<span class="pub-cites"></span>{% endif %}
   </div>
 </div>
