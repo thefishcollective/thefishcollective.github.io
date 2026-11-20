@@ -38,7 +38,7 @@ SUMMARY_FILE = os.environ.get("IMPACT_SUMMARY", "_impact/last-run.md")  # pull r
 SEARCHES = {
     "GlobalArchive": ["GlobalArchive", "Global Archive"],
     "The Fish Collective": ["The Fish Collective"],
-    "CheckEM": ["CheckEM"],
+    "CheckEM": ["CheckEM", "globalarchive.shinyapps.io/checkem"],  # the second is CheckEM's old web address
     "Australian BRUVS Working Group": ["Australian BRUVS Working Group", "Australian BRUV Working Group",
                                        "Australian BRUVs Working Group"],
 }
