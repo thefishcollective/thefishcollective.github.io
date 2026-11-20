@@ -8,6 +8,8 @@
 # core: true   -> listed in the top "Core Fish Collective outputs" section
 # type: report  -> a core report (only shown in the core section)
 # note:         -> optional one-line note shown under the entry
+# type: citing  -> a paper citing a core output that OpenAlex can't link automatically
+#                 (e.g. a core report without a DOI); `cites` lists the core outputs it cites
 # Optional fields: authors, journal, source, mentions, overton_id, added (YYYY-MM-DD)
 
 - type: paper
@@ -591,6 +593,16 @@
   mentions: ["GlobalArchive"]
   added: 2026-11-19
 
+- type: policy
+  title: "Independent evaluation of the implementation of marine park management plans: final report on overall findings"
+  authors: "ORIMA Research"
+  year: 2026
+  source: "Director of National Parks (Parks Australia), Department of Climate Change, Energy, the Environment and Water"
+  url: "https://australianmarineparks.gov.au/static/00479cbb1c1720c93aa3102c6b360b16/amp-marine-parks-management-plan-evaluation-findings-20260715.pdf"
+  overton_id: "apo-29225f79a4315f2696a6e84576bf982b"
+  mentions: ["Cites Dunstan et al. 2023"]
+  added: 2026-11-20
+
 # --- Core reports built on the Australian BRUV synthesis habitat data (added 2026-11-20) ---
 
 - type: report
@@ -611,4 +623,132 @@
   source: "Report to Parks Australia and the National Environmental Science Program, Marine Biodiversity Hub"
   url: "https://www.nespmarinecoastal.edu.au/wp-content/uploads/2024/01/Hayes-et-al_SS2_M8_D7_M4_Designing-a-targeted-monitoring-program-to-support-evidence-based-management-of-AMPs.pdf"
   note: "Uses habitat data from the Australian BRUV synthesis."
+  added: 2026-11-20
+
+# --- Papers citing core reports, from Google Scholar (added 2026-11-20) ---
+
+- type: citing
+  title: "Safeguarding marine protected areas from cumulative effects: a review of methods, best practices, and applications"
+  authors: "Murray et al."
+  year: 2025
+  journal: "Environmental Management"
+  doi: "10.1007/s00267-025-02146-w"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "A systematic review on the anthropogenic stressors on sessile benthic mesophotic reef communities: implications for temperate reef management in Australia"
+  authors: "Wong et al."
+  year: 2023
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2023.1276072"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Enhancing climate change planning and adaptive management in marine protected areas through targets, thresholds, and social-ecological objectives"
+  authors: "Bryce & Hunter"
+  year: 2024
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2024.1339871"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "'State of the Environment' reports require integrated and holistic approaches: lessons from Australia's marine experience"
+  authors: "Trebilco et al."
+  year: 2025
+  journal: "Marine Policy"
+  doi: "10.1016/j.marpol.2025.106853"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Squidle+: a collaborative platform to manage, discover and annotate marine imagery"
+  authors: "Friedman et al."
+  year: 2026
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2025.1677103"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Seamount coral reefs are egg case nurseries for deep-sea skates"
+  authors: "Maguire et al."
+  year: 2023
+  journal: "Journal of Fish Biology"
+  doi: "10.1111/jfb.15376"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Temporal change in the abundance and size distribution patterns of temperate deep reef sessile communities under multiple climate disturbances"
+  authors: "Wong et al."
+  year: 2025
+  journal: "Estuarine, Coastal and Shelf Science"
+  doi: "10.1016/j.ecss.2025.109224"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Documenting biodiversity outcomes in marine fisheries management: a supplemental guide to the FAO handbook"
+  authors: "Agardy et al."
+  year: 2025
+  journal: "FAO"
+  doi: "10.4060/cd6085en"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Geomorphological drivers of benthic community distribution on high energy temperate mesophotic and rariphotic reefs"
+  authors: "Wong et al."
+  year: 2025
+  journal: "Marine Environmental Research"
+  doi: "10.1016/j.marenvres.2025.107078"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Geomorphometric maps of Australia's Marine Park estate and their role in improving the integrated monitoring and management of marine ecosystems"
+  authors: "Lucieer et al."
+  year: 2024
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2023.1302108"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "An implementation roadmap for Australia's Ocean Accounts"
+  authors: "Trebilco et al."
+  year: 2026
+  journal: "Australian Journal of Maritime & Ocean Affairs"
+  doi: "10.1080/18366503.2026.2687145"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "A very large spawning aggregation of a deep-sea eel: magnitude and status"
+  authors: "Williams et al."
+  year: 2021
+  journal: "Journal of Marine Science and Engineering"
+  doi: "10.3390/jmse9070723"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "Large-scale bedrock outcrop mapping on the NE Atlantic Irish continental margin"
+  authors: "Recouvreur et al."
+  year: 2024
+  journal: "Frontiers in Marine Science"
+  doi: "10.3389/fmars.2023.1258070"
+  cites: ["Hayes et al. 2021"]
+  added: 2026-11-20
+
+- type: citing
+  title: "« Carbone bleu » et sédiments profonds dans la ZEE française de La Passion-Clipperton : enjeux de conservation et d'atténuation climatique"
+  authors: "Tchékémian"
+  year: 2026
+  journal: "Études caribéennes"
+  doi: "10.4000/163w9"
+  cites: ["Hayes et al. 2021"]
   added: 2026-11-20
