@@ -14,6 +14,19 @@
     </p>
     <a class="pub-doi" href="{{ link }}" target="_blank" rel="noopener">{% if pub.doi %}doi.org/{{ pub.doi }}{% else %}{{ link | remove: "https://" | remove: "http://" | truncate: 80 }}{% endif %}</a>
     {% if pub.note %}<p class="pub-note">{{ pub.note }}</p>{% endif %}
-    {% if pub.doi %}<span class="pub-cites"></span>{% endif %}
+    {% if pub.doi %}<span class="pub-cites"></span>
+    {% elsif pub.core %}
+      {% comment %} No DOI, so OpenAlex can't count citations: count the citing papers and
+         policy documents listed on this page instead (or use cited_by if it's set). {% endcomment %}
+      {% assign cite_label = pub.authors | append: " " | append: pub.year %}
+      {% assign cite_tag = "Cites " | append: cite_label %}
+      {% assign n = 0 %}
+      {% for c in site.data.publications %}
+        {% if c.type == "citing" and c.cites contains cite_label %}{% assign n = n | plus: 1 %}
+        {% elsif c.mentions contains cite_tag %}{% assign n = n | plus: 1 %}{% endif %}
+      {% endfor %}
+      {% if pub.cited_by %}{% assign n = pub.cited_by %}{% endif %}
+      {% if n > 0 %}<span class="pub-cites" data-static-cites="{{ n }}">Cited by {{ n }}{% if pub.cited_by_source %} ({{ pub.cited_by_source }}){% endif %}</span>{% endif %}
+    {% endif %}
   </div>
 </div>

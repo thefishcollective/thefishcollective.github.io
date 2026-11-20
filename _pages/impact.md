@@ -115,6 +115,10 @@ var EXTRA_CITING = {{ extra_citing | jsonify }};
         });
       });
     });
+    // core outputs without a DOI carry their (hand-counted) citations on the card
+    Array.prototype.forEach.call(document.querySelectorAll("[data-static-cites]"), function (el) {
+      coreCites += parseInt(el.getAttribute("data-static-cites"), 10) || 0;
+    });
     if (coreIds.length) setText("core-cites", "cited " + coreCites.toLocaleString() + " times in total");
     return loadCiting(coreIds, coreLabels);
   }).catch(function () { fail(); });

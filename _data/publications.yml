@@ -10,6 +10,9 @@
 # note:         -> optional one-line note shown under the entry
 # type: citing  -> a paper citing a core output that OpenAlex can't link automatically
 #                 (e.g. a core report without a DOI); `cites` lists the core outputs it cites
+# cited_by:     -> optional fixed citation count for a core output without a DOI
+#                 (otherwise the citing papers/policy documents listed here are counted);
+#                 add cited_by_source (e.g. "Google Scholar") to show where it came from
 # Optional fields: authors, journal, source, mentions, overton_id, added (YYYY-MM-DD)
 
 - type: paper
