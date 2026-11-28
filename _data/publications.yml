@@ -755,3 +755,41 @@
   doi: "10.4000/163w9"
   cites: ["Hayes et al. 2021"]
   added: 2026-11-20
+
+# --- Added automatically 2026-11-28 (check before merging) ---
+
+- type: paper
+  title: "Random encounter modelling as a viable method to estimate absolute abundance of reef fish"
+  authors: "Chow et al."
+  year: 2025
+  journal: "Methods in Ecology and Evolution"
+  doi: "10.1111/2041-210x.70215"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-28
+
+- type: paper
+  title: "Fifty Years Later: Art, Ecocide and Animatedness in Vietnam"
+  authors: "Brianne Cohen"
+  year: 2024
+  journal: "Southeast of now"
+  doi: "10.56159/sen.2024.a924614"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-28
+
+- type: paper
+  title: "Collective action in fishery resource management and its challenges in Ethiopia: a review"
+  authors: "Oliyad Sori"
+  year: 2024
+  journal: "Discover Food"
+  doi: "10.1007/s44187-024-00123-6"
+  mentions: ["The Fish Collective"]
+  added: 2026-11-28
+
+- type: paper
+  title: "Biological and habitat feature descriptions for the continental shelves of Australia’s temperate-water marine parks - including collation of existing mapping in all AMPs"
+  authors: "Monk et al."
+  year: 2017
+  journal: "UTAS Research Repository"
+  doi: "10.13140/rg.2.2.32592.58886"
+  mentions: ["GlobalArchive"]
+  added: 2026-11-28
